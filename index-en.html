@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+</head>
+<body>
+
+    <header>
+    <!-- Navigation -->
+    <nav class="navbar">
+    <ul>
+        <li><a href="index-en.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="cvitae.html">Curriculum Vitae</a></li>
+        <li><a href="mailto:info@example.com">Contact</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="travel-reports.html">Travel Reports</a></li>
+        <li><a href="github.html">GitHub</a></li>
+        <li><a href="game.html">Game</a></li>
+    </ul>
+</nav>
+
+<!-- Darkmode -->
+ <div class="controls">
+<button type="button" id="theme-toggle" aria-label="Darkmode toggle">
+</button>
+
+<!-- Sprachauswahl -->
+<label for="language-select" class="visually-hidden">Choose Language</label>
+<select id="language-select" onchange="location = this.value;">
+    <option value="index-en.html" selected>EN</option>
+    <option value="index.html">DE</option>
+</select>
+</div>
+</header>
+
+<main>
+    <section id="about">
+    <h1>Welcome!</h1>
+    <figure><img src="Fotos/Profil3.JPG" alt="Profile picture of Sally" width="200" height="200">
+    <figcaption>Sally - Computer Science student & Acoustics expert</figcaption>
+    </figure>
+       <p> Hello, my name is Sally and this is my portfolio, where I present my projects and experiences and a bit about myself. 
+        Have fun exploring! I am 34 years old and studying Computer Science in distance learning. 
+        I have been working in the field of acoustics for the last 15 years and have been leading different teams in Germany for the past nine years in the field of assistive devices. <br>
+        To learn more about my journey, click on the <a href="cvitae.html">link</a></p>     
+ </section>    
+
+<!-- Blogeinträge -->
+  <section id="diary">
+     <h2>Blog</h2>
+     <!-- Vorschau-Bilder als Links zu den Blogbeiträgen -->
+      <a href="blog-eintrag1.html" title="Birthday Celebration">
+        <img src="Fotos/Geburtstag.JPG" alt="Birthday Photo" width="50" height="50">
+      </a>
+
+      <a href="blog-eintrag2.html" title="Cat in a Bag">
+        <img src="Fotos/KatzeTüte.JPG" alt="Cat in a Bag Photo" width="50" height="50">
+      </a>
+
+            <a href="blog-eintrag3.html" title="Renovation">
+        <img src="Fotos/Renovierung.jpg" alt="Renovation Photo" width="50" height="50">
+      </a>
+</section>
+
+<!-- Flächen zur Weiterleitung Reisen, Fotos und GitHub -->
+<section id="quick-links">
+    <h2>Explore More</h2>
+    <ul class="tile-container">
+        <li>
+            <a href="reiseberichte.html" class="tile">
+                <span>My Trips</span>
+            </a>
+        </li>
+        <li>
+            <a href="fotografien.html" class="tile">
+                <span>Gallery</span>
+            </a>
+        </li>
+        <li>
+            <a href="github.html" class="tile">
+                <span>My Projects on GitHub</span>
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!-- Fläche zur Weiterleitung Game -->
+ <section id="game">
+<a href="game.html" aria-label="Gaming">
+<img src="Fotos/PlayButton.png" alt="Play Button" width="50">
+</a>
+</section>
+
+<footer>
+ <p>My Portfolio, 2026</p>
+</footer>
+
+</body>
+</html>
