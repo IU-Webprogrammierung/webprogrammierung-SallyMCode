@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lebenslauf</title>
+</head>
+
+<body>
+
+  <header>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="lebenslauf.html" aria-current="page">Lebenslauf</a></li>
+        <li><a href="mailto:info@example.com">Kontakt</a></li>
+        <li><a href="fotografien.html">Fotografien</a></li>
+        <li><a href="reiseberichte.html">Reiseberichte</a></li>
+        <li><a href="github.html">GitHub</a></li>
+        <li><a href="game.html">Game</a></li>
+      </ul>
+    </nav>
+
+    <!-- Darkmode -->
+    <div class="controls">
+      <button type="button" id="theme-toggle" aria-label="Darkmode umschalten">
+      </button>
+
+      <!-- Sprachauswahl -->
+      <label for="language-select" class="visually-hidden">Sprache auswählen</label>
+      <select id="language-select" onchange="location = this.value;">
+        <option value="lebenslauf.html" selected>DE</option>
+        <option value="cvitae.html">EN</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <h1>Lebenslauf</h1>
+
+    <section id="school">
+      <h2>Schulischer Werdegang</h2>
+      <ul class="list-group">
+        <li class="list-group-item">1998 - 2002 Grundschule in Bahrdorf</li>
+        <li class="list-group-item">2002 - 2004 Orientierungsstufe in Velpke</li>
+        <li class="list-group-item">2004 - 2011 Gymnasium Julianum Helmstedt</li>
+      </ul>
+    </section>
+
+    <section id="work">
+      <h2>Beruflicher Werdegang</h2>
+      <ul class="list-group">
+        <li class="list-group-item">2011 - 2014 Ausbildung zur Hörakustikerin bei KIND GmbH in Wolfsburg</li>
+        <li class="list-group-item">2014 - 2016 Hörakustikergesellin bei KIND in Wolfsburg</li>
+        <li class="list-group-item">2016 - 2017 Hörakustikmeisterin bei KIND, Bundesweiter Springer (Filialleitung in
+          Ingolstadt und Mönchengladbach) </li>
+        <li class="list-group-item">2017 - 2022 Fachgeschäftsleitung bei KIND in Wolfsburg-Nordsteimke</li>
+        <li class="list-group-item">2022 Technische Betriebsleitung Akustik bei KIND in Jena</li>
+        <li class="list-group-item">2023 Fachgeschäftsleitung bei KIND in Jena</li>
+      </ul>
+    </section>
+
+    <section id="qualifications">
+      <h2>Zusätzliche Qualifikationen</h2>
+      <ul class="list-group">
+        <li class="list-group-item">2012 Gebärdensprachkurs</li>
+        <li class="list-group-item">2013 Verkaufsorientierte Beratung</li>
+        <li class="list-group-item">2016 Mitarbeitermotivation und Burnoutprävention</li>
+        <li class="list-group-item">2017 Mitarbeiterführung und Konfliktgesprächsführung</li>
+        <li class="list-group-item">2017 Qualifikation Pädakustikerin</li>
+        <li class="list-group-item">2026 MED-EL Service License</li>
+        <li class="list-group-item">2026 Cochlear-Systeme Einführungen</li>
+        <li class="list-group-item">2026 Data Science Boot Camp</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Mein Portfolio</p>
+  </footer>
+
+</body>
+
+</html>
