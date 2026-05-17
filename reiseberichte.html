@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="lebenslauf.html">Lebenslauf</a></li>
+                <li><a href="mailto:info@example.com">Kontakt</a></li>
+                <li><a href="fotografien.html">Fotografien</a></li>
+                <li><a href="reiseberichte.html" aria-current="page">Reiseberichte</a></li>
+                <li><a href="github.html">GitHub</a></li>
+                <li><a href="game.html">Game</a></li>
+            </ul>
+        </nav>
+
+        <!-- Darkmode -->
+        <div class="controls">
+            <button type="button" id="theme-toggle" aria-label="Darkmode umschalten">
+            </button>
+
+            <!-- Sprachauswahl -->
+            <label for="language-select" class="visually-hidden">Sprache auswählen</label>
+            <select id="language-select" onchange="location = this.value;">
+                <option value="reiseberichte.html" selected>DE</option>
+                <option value="travel-reports.html">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <h1>Reiseberichte</h1>
+        <section id="travel1">
+            <h2>Urlaub in Irland</h2>
+            <figure><img src="Fotos/Irland.JPG" alt="Die Cliffs of Moher in Irland bei Tageslicht" width="200" height="200">
+                <figcaption>Irländische Landschaft - Klippen am Meer</figcaption>
+            </figure>
+            <p>Willkommen an den Cliffs of Moher! Die atemberaubende Natur in Irland hat uns alle in ihren Bann gezogen.
+                Die Klippen am Meer sind wirklich beeindruckend und bieten einen fantastischen Blick über das Wasser.
+                Wir haben die frische Meeresluft genossen und die Schönheit der Landschaft auf uns wirken lassen. Es war
+                eine unvergessliche Erfahrung, die wir immer in Erinnerung behalten werden.
+                Kaum zu glauben, aber es gibt Leute, die für ein schönes Foto alles
+                machen. Die Hänge runterklettern ist lebensgefährlich und kein Bild der Welt wert. Es gibt auch so genug
+                zu bestaunen. Selten hat mich eine Landschaft so beeindruckt.</p>
+        </section>
+
+        <section id="travel2">
+            <h2>Dänemark - Wir hatten eine schöne Zeit!</h2>
+
+            <figure><img src="Fotos/Dänemark.JPG" alt="Hafen in Dänemark" width="200" height="200">
+                <figcaption>Hafen in Dänemark</figcaption>
+            </figure>
+            <p>Unser Besuch in Dänemark war wirklich wunderbar! Die schöne Landschaft und die freundliche Bevölkerung
+                haben uns sehr beeindruckt.
+                Wir haben viel Zeit am Hafen verbracht und die lokale Kultur entdeckt. Die Ruhe hat sehr
+                geholfen, um endlich einmal richtig runterzukommen. Was war vor allem angenehm und erschreckend
+                zugleich? Diese absolute Stille. Keine Fahrzeuggeräusche. Kein Lärm von irgendwelchen Maschinen.
+                Wir kommen gerne wieder.</p>
+        </section>
+
+        <section id="travel3">
+            <h2>Wir bleiben in Deutschland</h2>
+
+            <figure><img src="Fotos/Partnachklamm.JPG" alt="Partnachklamm" width="200" height="200">
+                <figcaption>Wasserfall der Partnachklamm</figcaption>
+            </figure>
+            <p>Anstatt wieder zu Fliegen, haben wir entschieden, unsere Zeit in Deutschland zu verbringen. Die
+                natürliche Schönheit und die ruhige Atmosphäre haben uns sehr beeindruckt. Wir haben viel Zeit in der
+                Natur verbracht.
+                Endlich konnte ich die Partnachklamm besuchen, die schon so lange auf meiner Liste stand. Das Foto kann
+                es kaum festhalten, wie beeindruckend die Klamm wirklich ist. Wer die Gelegenheit bekommt, sollte sie
+                unbedingt einmal besuchen. Also, auch in Deutschland gibt es wahnsinnig schöne Orte.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Mein Portfolio, 2026</p>
+    </footer>
+
+</body>
+
+</html>

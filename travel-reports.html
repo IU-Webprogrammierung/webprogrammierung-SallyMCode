@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="blog-en.html">Blog</a></li>
+                <li><a href="cvitae.html">Curriculum Vitae</a></li>
+                <li><a href="mailto:info@example.com">Contact</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li><a href="travel-reports.html" aria-current="page">Travel Reports</a></li>
+                <li><a href="github.html">GitHub</a></li>
+                <li><a href="game.html">Game</a></li>
+            </ul>
+        </nav>
+
+        <!-- Darkmode -->
+        <div class="controls">
+            <button type="button" id="theme-toggle" aria-label="Toggle Darkmode">
+            </button>
+
+            <!-- Sprachauswahl -->
+            <label for="language-select" class="visually-hidden">Select Language</label>
+            <select id="language-select" onchange="location = this.value;">
+                <option value="travel-reports.html" selected>EN</option>
+                <option value="reiseberichte.html">DE</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <h1>Travel Reports</h1>
+        <section id="travel1">
+            <h2>Vacation in Ireland</h2>
+            <figure><img src="Fotos/Irland.JPG" alt="The Cliffs of Moher in Ireland during daylight" width="200"
+                    height="200">
+                <figcaption>Irish Landscape - Cliffs by the Sea</figcaption>
+            </figure>
+            <p>Welcome to the Cliffs of Moher! The breathtaking nature in Ireland has captivated us all. 
+               The cliffs by the sea are truly impressive and offer a fantastic view over the water. 
+               We enjoyed the fresh sea air and let the beauty of the landscape sink in. It was an 
+               unforgettable experience that we will always remember. 
+               Hard to believe, but some people will do anything for a good photo. Climbing down the 
+               slopes is life-threatening and not worth any picture in the world. There is plenty to 
+               marvel at as it is. Rarely has a landscape impressed me this much.</p>
+        </section>
+
+        <section id="travel2">
+            <h2>Denmark - We Had a Nice Time!</h2>
+            <figure><img src="Fotos/Dänemark.JPG" alt="Harbor in Denmark" width="200" height="200">
+                <figcaption>Harbor in Denmark</figcaption>
+            </figure>
+            <p>Our visit to Denmark was truly wonderful! The beautiful landscape and the friendly 
+               locals left a great impression on us. We spent a lot of time at the harbor and 
+               discovered the local culture. The tranquility really helped us to finally wind down. 
+               What was both pleasant and startling at the same time? The absolute silence. 
+               No vehicle noise. No noise from any machinery. We would love to come back.</p>
+        </section>
+
+        <section id="travel3">
+            <h2>Germany - We Stayed Home</h2>
+            <figure><img src="Fotos/Partnachklamm.JPG" alt="Partnachklamm during daylight" width="200" height="200">
+                <figcaption>Waterfall of the Partnachklamm</figcaption>
+            </figure>
+            <p>Instead of flying again, we decided to spend our time in Germany. The natural beauty 
+               and the quiet atmosphere have greatly impressed us. We spent a lot of time in nature. 
+               Finally, I could visit the Partnachklamm, which has been on my list for a long time. 
+               The photo can hardly capture how impressive the gorge really is. Whoever gets the 
+               chance should definitely visit it. It goes to show that there are incredibly 
+               beautiful places right here in Germany as well.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>My Portfolio, 2026</p>
+    </footer>
+
+</body>
+
+</html>
