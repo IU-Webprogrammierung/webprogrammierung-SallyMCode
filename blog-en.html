@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="blog-en.html" aria-current="page">Blog</a></li>
+                <li><a href="cvitae.html">Curriculum Vitae</a></li>
+                <li><a href="mailto:info@example.com">Contact</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li><a href="travel-reports.html">Travel Reports</a></li>
+                <li><a href="github-en.html">GitHub</a></li>
+                <li><a href="game.html">Game</a></li>
+            </ul>
+        </nav>
+
+        <!-- Darkmode -->
+        <div class="controls">
+            <button type="button" id="theme-toggle" aria-label="Toggle Darkmode">
+            </button>
+
+            <!-- Sprachauswahl -->
+            <label for="language-select" class="visually-hidden">Select Language</label>
+            <select id="language-select" onchange="location = this.value;">
+                <option value="blog-en.html" selected>EN</option>
+                <option value="blog.html">DE</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <h1>Blog</h1>
+        <section id="blog1">
+            <h2>Office Renovation Complete!</h2>
+            <figure><img src="Fotos/VorRenovierung.jpg" alt="Office before the renovation" width="200" height="200">
+                <figcaption>Sally's Office before the renovation</figcaption>
+            </figure>
+            <figure><img src="Fotos/Renovierung.jpg" alt="Office after the renovation" width="200" height="200">
+                <figcaption>Sally's Office after the renovation</figcaption>
+            </figure>
+            <p>Finally, the time has come: my office is fully wallpapered and painted. There’s no comparison to how it
+                looked before. The old walls look completely different now!
+                It took a while, but it was definitely worth it. Now I can finally focus on my work again instead of
+                sitting in a cluttered room.
+                I’m really looking forward to using the new office and hope it helps me be more productive.
+                Now, all that’s missing is the furniture... but I’m calling it a day for now!</p>
+        </section>
+
+        <section id="blog2">
+            <h2>Game Afternoon with Marla!</h2>
+            <figure><img src="Fotos/KatzeTüte.JPG" alt="Cat in a Bag" width="200" height="200">
+                <figcaption>Cat hiding in the Bag</figcaption>
+            </figure>
+            <p>Our new family member has finally settled in! Marla seems to feel quite comfortable comfortable in her new home.
+                We spent the afternoon with cuddles and games.
+                In the end, her favorite spot was the bag from our last walk. Hard to believe how much the life with a
+                pet enriches us.
+                It's so nice to have her around and I'm looking forward to many more shared days!</p>
+        </section>
+
+        <section id="blog3">
+            <h2>Birthday</h2>
+            <figure><img src="Fotos/Geburtstag.JPG" alt="Sally with Birthday Cake" width="200" height="200">
+                <figcaption>Sally with Birthday Cake</figcaption>
+            </figure>
+            <p>My sister was so kind to bake a wonderful and super delicious cake for my birthday. Thank you for the
+                beautiful day, the great gifts and
+                especially for thinking of me! It's so nice to be surrounded by loved ones and I'm grateful for each and
+                every one of them. <br>
+                I'm looking forward to the next year and hope it will be just as nice as this year!</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>My Portfolio, 2026</p>
+    </footer>
+
+</body>
+
+</html>

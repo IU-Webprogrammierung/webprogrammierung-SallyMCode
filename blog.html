@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html" aria-current="page">Blog</a></li>
+                <li><a href="lebenslauf.html">Lebenslauf</a></li>
+                <li><a href="mailto:info@example.com">Kontakt</a></li>
+                <li><a href="fotografien.html">Fotografien</a></li>
+                <li><a href="reiseberichte.html">Reiseberichte</a></li>
+                <li><a href="github.html">GitHub</a></li>
+                <li><a href="game.html">Game</a></li>
+            </ul>
+        </nav>
+
+        <!-- Darkmode -->
+        <div class="controls">
+            <button type="button" id="theme-toggle" aria-label="Darkmode umschalten">
+            </button>
+
+            <!-- Sprachauswahl -->
+            <label for="language-select" class="visually-hidden">Sprache auswählen</label>
+            <select id="language-select" onchange="location = this.value;">
+                <option value="blog.html" selected>DE</option>
+                <option value="blog-en.html">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <h1>Blog</h1>
+        <section id="blog1">
+            <h2>Bürorenovierung fertig!</h2>
+            <figure><img src="Fotos/VorRenovierung.jpg" alt="Büro vor der Renovierung" width="200" height="200">
+                <figcaption>Sallys Büros vor der Renovierung</figcaption>
+            </figure>
+            <figure><img src="Fotos/Renovierung.jpg" alt="Büro nach der Renovierung" width="200" height="200">
+                <figcaption>Sallys Büros nach der Renovierung</figcaption>
+            </figure>
+            <p>Endlich ist es soweit, mein Büro ist fertig tapeziert und gestrichen. Kein Vergleich zu Vorher. Die alten
+                Wände sehen jetzt ganz anders aus!
+                Es hat zwar eine Weile gedauert, aber es hat sich gelohnt. Jetzt kann ich mich endlich wieder auf meine
+                Arbeit konzentrieren und muss nicht mehr in einem unordentlichen Raum sitzen. <br>
+                Ich freue mich schon darauf, das neue Büro zu nutzen und hoffe, dass es mir dabei hilft, produktiver zu
+                sein. <br>
+                Fehlen nur noch die Möbel... Heute mache ich aber nichts mehr!</p>
+        </section>
+
+        <section id="blog2">
+            <h2>Spielnachmittag mit Marla!</h2>
+            
+            <figure><img src="Fotos/KatzeTüte.JPG" alt="Katze in einer Tüte" width="200" height="200">
+                <figcaption>Katze versteckt sich in der Tüte</figcaption>
+            </figure>
+            <p>Unser neues Familienmitglied hat sich endlich eingelebt! Marla scheint sich pudelwohl (haha, Pudel...) zu
+                fühlen. Wir haben den Nachmittag mit Schmusen und Spielen verbracht.
+                Am Ende war ihr Lieblingsort, der in der Tüte vom letzten Bummeltrip. Kaum zu glauben, wie sehr das
+                Leben mit einem Haustier bereichert wird. Es ist so schön, sie um sich zu haben und ich freue mich schon
+                auf viele weitere gemeinsame Tage!</p>
+            
+        </section>
+
+        <section id="blog3">
+            <h2>Geburtstag</h2>
+            
+            <figure><img src="Fotos/Geburtstag.JPG" alt="Sally mit Geburtstagskuchen" width="200" height="200">
+                <figcaption>Sally mit Geburtstagskuchen</figcaption>
+            </figure>
+            <p>Meine Schwester war so lieb mir zu meinem Geburtstag einen wunderschönen und super leckeren Kuchen zu
+                backen. Danke für den schönen Tag, die tollen Geschenke und
+                vor allem für das an mich Denken! Es ist so schön, von lieben Menschen umgeben zu sein und ich bin
+                dankbar für jeden einzelnen von ihnen. <br>
+                Ich freue mich schon auf das nächste Jahr und hoffe, dass es genauso schön wird wie dieses Jahr!</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Mein Portfolio, 2026</p>
+    </footer>
+
+</body>
+
+</html>
