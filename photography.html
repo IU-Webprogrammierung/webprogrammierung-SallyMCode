@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="blog-en.html">Blog</a></li>
+                <li><a href="cvitae.html">Curriculum Vitae</a></li>
+                <li><a href="mailto:info@example.com">Contact</a></li>
+                <li><a href="photography.html" aria-current="page">Photography</a></li>
+                <li><a href="travel-reports.html">Travel Reports</a></li>
+                <li><a href="github-en.html">GitHub</a></li>
+                <li><a href="game.html">Game</a></li>
+            </ul>
+        </nav>
+
+        <!-- Darkmode -->
+        <div class="controls">
+            <button type="button" id="theme-toggle" aria-label="Toggle Darkmode">
+            </button>
+
+            <!-- Sprachauswahl -->
+            <label for="language-select" class="visually-hidden">Select Language</label>
+            <select id="language-select" onchange="location = this.value;">
+                <option value="photography.html" selected>EN</option>
+                <option value="fotografien.html">DE</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <h1>Photography</h1>
+
+        <section id="landscapes">
+            <h2>Landscapes</h2>
+            <div class="photo-grid">
+                <figure>
+                    <img src="Fotos/island1.jpg" alt="Lake in the mist" width="200" height="200">
+                    <figcaption>Lake in the mist, Iceland</figcaption>
+                </figure>
+                <figure>
+                    <img src="Fotos/island2.jpg" alt="Lake with cloud cover" width="200" height="200">
+                    <figcaption>Lake with cloud cover, Iceland</figcaption>
+                </figure>
+                <figure>
+                    <img src="Fotos/island3.jpg" alt="The sea in Iceland" width="200" height="200">
+                    <figcaption>The sea in Iceland</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="wildlife">
+            <h2>Wildlife Photography</h2>
+            <div class="photo-grid">
+                <figure>
+                    <img src="Fotos/rind.jpg" alt="Scottish Highland Cattle" width="200" height="200">
+                    <figcaption>Scottish Highland cattle grazing</figcaption>
+                </figure>
+                <figure>
+                    <img src="Fotos/wolf.jpg" alt="Maned wolf" width="200" height="200">
+                    <figcaption>A maned wolf roaming</figcaption>
+                </figure>
+                <figure>
+                    <img src="Fotos/moewe.jpg" alt="Seagull on the beach" width="200" height="200">
+                    <figcaption>Seagull on the beach at Dahme</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="botanical">
+            <h2>Botanical Photography</h2>
+            <div class="photo-grid">
+                <figure>
+                    <img src="Fotos/pilze.jpg" alt="Mushrooms on a tree trunk" width="200" height="200">
+                    <figcaption>Mushrooms growing on a tree trunk</figcaption>
+                </figure>
+                <figure>
+                    <img src="Fotos/feld.jpg" alt="A wheat field in summer" width="200" height="200">
+                    <figcaption>A wheat field in summer</figcaption>
+                </figure>
+                <figure>
+                    <img src="Fotos/baum.jpg" alt="Large tree seen from below" width="200" height="200">
+                    <figcaption>A majestic tree viewed from below</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+    </main>
+
+    <footer>
+        <p>My Portfolio, 2026</p>
+    </footer>
+
+</body>
+
+</html>

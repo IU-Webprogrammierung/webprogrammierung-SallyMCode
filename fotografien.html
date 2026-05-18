@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="lebenslauf.html">Lebenslauf</a></li>
+                <li><a href="mailto:info@example.com">Kontakt</a></li>
+                <li><a href="fotografien.html" aria-current="page">Fotografien</a></li>
+                <li><a href="reiseberichte.html">Reiseberichte</a></li>
+                <li><a href="github.html">GitHub</a></li>
+                <li><a href="game.html">Game</a></li>
+            </ul>
+        </nav>
+
+        <!-- Darkmode -->
+        <div class="controls">
+            <button type="button" id="theme-toggle" aria-label="Darkmode umschalten">
+            </button>
+
+            <!-- Sprachauswahl -->
+            <label for="language-select" class="visually-hidden">Sprache auswählen</label>
+            <select id="language-select" onchange="location = this.value;">
+                <option value="fotografien.html" selected>DE</option>
+                <option value="photography.html">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <h1>Fotografien</h1>
+        <section id="landschaften">
+            <h2>Landschaftsfotografien</h2>
+            <div class="photo-grid">
+                <figure><img src="Fotos/island1.jpg" alt="See im Nebel" width="200" height="200">
+                </figure>
+                <figure><img src="Fotos/island2.jpg" alt="See mit Wolkendecke" width="200" height="200">
+                    <figcaption>Ein See mit Wolkendecke auf Island</figcaption>
+                </figure>
+                <figure><img src="Fotos/island3.jpg" alt="Meer auf Island" width="200" height="200">
+                    <figcaption>Ein Meer auf Island</figcaption>
+                </figure>
+            </div>
+
+        </section>
+
+        <section id="tiere">
+            <h2>Tierfotografien</h2>
+            <div class="photo-grid">
+                <figure><img src="Fotos/rind.jpg" alt="Ein schottisches Hochlandrind" width="200" height="200">
+                    <figcaption>Ein schottisches Hochlandrind frisst</figcaption>
+                </figure>
+                <figure><img src="Fotos/wolf.jpg" alt="Mähnenwolf" width="200" height="200">
+                    <figcaption>Ein Mähnenwolf wandert umher</figcaption>
+                </figure>
+                <figure><img src="Fotos/moewe.jpg" alt="Möwe am Strand" width="200" height="200">
+                    <figcaption> Eine Möwe am Strand bei Dahme</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="pflanzen">
+            <h2>Pflanzenfotografien</h2>
+            <div class="photo-grid">
+                <figure><img src="Fotos/pilze.jpg" alt="Pilze wachsen auf einem Baumstamm" width="200" height="200">
+                    <figcaption>Pilze wachsen auf einem Baumstamm im Wald</figcaption>
+                </figure>
+                <figure><img src="Fotos/feld.jpg" alt="Ein Kornfeld im Sommer" width="200" height="200">
+                    <figcaption>Ein Kornfeld im Sommer</figcaption>
+                </figure>
+                <figure><img src="Fotos/baum.jpg" alt="Ein großer Baum von unten betrachtet" width="200" height="200">
+                    <figcaption>Ein großer Baum von unten betrachtet</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Mein Portfolio, 2026</p>
+    </footer>
+
+</body>
+
+</html>
