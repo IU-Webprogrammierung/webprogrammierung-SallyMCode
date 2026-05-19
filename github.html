@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="lebenslauf.html">Lebenslauf</a></li>
+                <li><a href="mailto:info@example.com">Kontakt</a></li>
+                <li><a href="fotografien.html">Fotografien</a></li>
+                <li><a href="reiseberichte.html">Reiseberichte</a></li>
+                <li><a href="github.html" aria-current="page">GitHub</a></li>
+                <li><a href="game.html">Game</a></li>
+            </ul>
+        </nav>
+
+        <!-- Darkmode -->
+        <div class="controls">
+            <button type="button" id="theme-toggle" aria-label="Darkmode umschalten">
+            </button>
+
+            <!-- Sprachauswahl -->
+            <label for="language-select" class="visually-hidden">Sprache auswählen</label>
+            <select id="language-select" onchange="location = this.value;">
+                <option value="github.html" selected>DE</option>
+                <option value="github-en.html">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <h1>Meine GitHub-Projekte</h1>
+        <section id="GitHub1">
+            <h2>Wetter Dashboard</h2>
+            <figure><img src="Fotos/WetterDashboard.jpg" alt="Bild vom Wetter Dashboard" width="200" height="200">
+                <figcaption>Wetter Dashboard im Vintage-Look</figcaption>
+            </figure>
+            <p>Ein Wetter-Dashboard im Vintage-Look, das aktuelle Wetterdaten über ein eigenes Node.js-Backend abruft.
+            </p>
+            <h3>Features:</h3>
+            <ul>
+                <li>Echtzeit-Wetterdaten: Abfrage von Temperatur, Windgeschwindigkeit und Luftfeuchtigkeit via
+                    OpenWeatherMap API.</li>
+                <li>Sicheres Backend: Nutzung eines Node.js/Express-Proxy-Servers, um API-Keys zu schützen.</li>
+                <li>Responsive: Optimiert für Desktop und mobile Endgeräte.</li>
+            </ul>
+            <h3>Tech-Stack:</h3>
+            <ul>
+                <li>Frontend: HTML, CSS, JavaScript</li>
+                <li>Backend: Node.js, Express</li>
+                <li>API: OpenWeatherMap</li>
+            </ul>
+            <p>Das Projekt ist auf GitHub verfügbar: <a href="https://github.com/sallymcode/weatherAPP" target="_blank"
+                    rel="noopener noreferrer">Wetter Dashboard auf GitHub</a></p>
+        </section>
+
+        <section id="GitHub2">
+            <h2>Persönlicher Book Tracker</h2>
+            <figure><img src="Fotos/BookTracker.jpg" alt="Bild von der Book Tracker-Website" width="200" height="200">
+                <figcaption>Persönlicher Book Tracker</figcaption>
+            </figure>
+            <p>Eine persönliche einfache Anwendung, um die eigenen Leseerfolge zu tracken.</p>
+            <h3>Features:</h3>
+            <ul>
+                <li>Verwaltung von Lesebüchern: Hinzufügen, Bearbeiten und Löschen von Büchern.</li>
+                <li>Auswertung von Statistiken: Genres, Lieblingsautorin, Anzahl der gelesenen Bücher und mehr.</li>
+                <li>Validierung von Eingaben</li>
+                <li>Sicherheitsabfragen vor dem Löschen von Büchern</li>
+            </ul>
+            <h3>Tech-Stack:</h3>
+            <ul>
+                <li>Frontend: HTML, CSS, JavaScript</li>
+                <li>Datenpersistenz: LocalStorage</li>
+                <li>Möglichkeit zur Erweiterung von Funktionen und Datenbank</li>
+            </ul>
+            <p>Das Projekt ist auf GitHub verfügbar: <a href="https://github.com/sallymcode/BookTracker" target="_blank"
+                    rel="noopener noreferrer">Book Tracker auf GitHub</a></p>
+
+        </section>
+
+        <section id="GitHub3">
+            <h2>IU Quiz Academy</h2>
+
+            <figure><img src="Fotos/QuizAcademy.JPG" alt="Dashboard von IU Quiz Academy" width="200" height="200">
+                <figcaption>Home Page der IU Quiz Academy</figcaption></figure>
+
+                <p>Eine Projektarbeit zur Entwicklung einer Quiz-Anwendung für die IU Quiz Academy.</p>
+                <h3>Features:</h3>
+                <ul>
+                    <li>Verwaltung von Quiz-Fragen und Antworten zum Selbststudium</li>
+                    <li>Benutzerregistrierung und -anmeldung</li>
+                    <li>Fortschrittsverfolgung und Statistiken</li>
+                    <li>Responsive Design für verschiedene Geräte</li>
+                </ul>
+                <h3>Tech-Stack:</h3>
+                <ul>
+                    <li>Frontend: HTML, CSS, JavaScript</li>
+                    <li>Backend: Node.js, Express, PostgreSQL</li>
+                </ul>
+                <p>Das Projekt ist auf GitHub verfügbar: <a href="https://github.com/KaiserFDev/iu-quiz-academy"
+                        target="_blank" rel="noopener noreferrer">IU Quiz Academy auf GitHub</a></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Mein Portfolio, 2026</p>
+    </footer>
+
+</body>
+
+</html>
