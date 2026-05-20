@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="lebenslauf.html">Lebenslauf</a></li>
+                <li><a href="mailto:info@example.com">Kontakt</a></li>
+                <li><a href="fotografien.html">Fotografien</a></li>
+                <li><a href="reiseberichte.html">Reiseberichte</a></li>
+                <li><a href="github.html">GitHub</a></li>
+                <li><a href="game.html" aria-current="page">Game</a></li>
+            </ul>
+        </nav>
+
+        <!-- Darkmode -->
+        <div class="controls">
+            <button type="button" id="theme-toggle" aria-label="Darkmode umschalten">
+            </button>
+
+            <!-- Sprachauswahl -->
+            <label for="language-select" class="visually-hidden">Sprache auswählen</label>
+            <select id="language-select" onchange="location = this.value;">
+                <option value="game.html" selected>DE</option>
+                <option value="game-en.html">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <h1>Tic Tac Toe</h1>
+
+        <section id="game-section">
+            <div id="game-grid">
+                <!-- 9 Felder für das Spiel -->
+                <button class="cell" data-index="0" aria-label="Feld 1"></button>
+                <button class="cell" data-index="1" aria-label="Feld 2"></button>
+                <button class="cell" data-index="2" aria-label="Feld 3"></button>
+                <button class="cell" data-index="3" aria-label="Feld 4"></button>
+                <button class="cell" data-index="4" aria-label="Feld 5"></button>
+                <button class="cell" data-index="5" aria-label="Feld 6"></button>
+                <button class="cell" data-index="6" aria-label="Feld 7"></button>
+                <button class="cell" data-index="7" aria-label="Feld 8"></button>
+                <button class="cell" data-index="8" aria-label="Feld 9"></button>
+            </div>
+
+            <!-- Statusanzeige -->
+            <p id="game-status" aria-live="polite">Spieler X ist am Zug</p>
+
+            <!-- Steuerung -->
+            <div class="game-controls">
+                <button type="button" id="reset-game" aria-label="Spiel neu starten">
+                    <img src="Fotos/play-taste.png" alt="Play Symbol" width="50">
+                    <span class="visually-hidden">Spiel neu starten</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Mein Portfolio, 2026</p>
+    </footer>
+
+</body>
+
+</html>
