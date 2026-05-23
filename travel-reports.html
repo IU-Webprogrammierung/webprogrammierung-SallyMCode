@@ -4,30 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Travel Reports - My Portfolio</title>
 </head>
 
 <body>
-
+<a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
     <header>
         <!-- Navigation -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <ul>
                 <li><a href="index-en.html">Home</a></li>
                 <li><a href="blog-en.html">Blog</a></li>
                 <li><a href="cvitae.html">Curriculum Vitae</a></li>
-                <li><a href="mailto:info@example.com">Contact</a></li>
+                <li><a href="mailto:info@example.com">Contact via Email</a></li>
                 <li><a href="photography.html">Photography</a></li>
                 <li><a href="travel-reports.html" aria-current="page">Travel Reports</a></li>
-                <li><a href="github.html">GitHub</a></li>
-                <li><a href="game.html">Game</a></li>
+                <li><a href="github-en.html">GitHub</a></li>
+                <li><a href="game-en.html">Game</a></li>
             </ul>
         </nav>
 
         <!-- Darkmode -->
         <div class="controls">
-            <button type="button" id="theme-toggle" aria-label="Toggle Darkmode">
+            <button type="button" id="theme-toggle">
+                <span class="visually-hidden">Toggle Dark Mode</span>
             </button>
+
 
             <!-- Sprachauswahl -->
             <label for="language-select" class="visually-hidden">Select Language</label>
@@ -38,9 +42,9 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <h1>Travel Reports</h1>
-        <section id="travel1">
+        <article id="travel1">
             <h2>Vacation in Ireland</h2>
             <figure><img src="Fotos/Irland.JPG" alt="The Cliffs of Moher in Ireland during daylight" width="200"
                     height="200">
@@ -53,9 +57,9 @@
                Hard to believe, but some people will do anything for a good photo. Climbing down the 
                slopes is life-threatening and not worth any picture in the world. There is plenty to 
                marvel at as it is. Rarely has a landscape impressed me this much.</p>
-        </section>
+        </article>
 
-        <section id="travel2">
+        <article id="travel2">
             <h2>Denmark - We Had a Nice Time!</h2>
             <figure><img src="Fotos/Dänemark.JPG" alt="Harbor in Denmark" width="200" height="200">
                 <figcaption>Harbor in Denmark</figcaption>
@@ -65,9 +69,9 @@
                discovered the local culture. The tranquility really helped us to finally wind down. 
                What was both pleasant and startling at the same time? The absolute silence. 
                No vehicle noise. No noise from any machinery. We would love to come back.</p>
-        </section>
+        </article>
 
-        <section id="travel3">
+        <article id="travel3">
             <h2>Germany - We Stayed Home</h2>
             <figure><img src="Fotos/Partnachklamm.JPG" alt="Partnachklamm during daylight" width="200" height="200">
                 <figcaption>Waterfall of the Partnachklamm</figcaption>
@@ -79,7 +83,7 @@
                chance should definitely visit it. It goes to show that there are incredibly 
                beautiful places right here in Germany as well.
             </p>
-        </section>
+        </article>
 
     </main>
 

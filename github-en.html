@@ -4,29 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>GitHub - My Portfolio</title>
 </head>
 
 <body>
-
+<a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
     <header>
         <!-- Navigation -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <ul>
                 <li><a href="index-en.html">Home</a></li>
                 <li><a href="blog-en.html" >Blog</a></li>
                 <li><a href="cvitae.html">Curriculum Vitae</a></li>
-                <li><a href="mailto:info@example.com">Contact</a></li>
+                <li><a href="mailto:info@example.com">Contact via Email</a></li>
                 <li><a href="photography.html">Photography</a></li>
                 <li><a href="travel-reports.html">Travel Reports</a></li>
                 <li><a href="github-en.html" aria-current="page">GitHub</a></li>
-                <li><a href="game.html">Game</a></li>
+                <li><a href="game-en.html">Game</a></li>
             </ul>
         </nav>
 
         <!-- Darkmode -->
         <div class="controls">
-            <button type="button" id="theme-toggle" aria-label="Toggle Darkmode">
+            <button type="button" id="theme-toggle">
+                <span class="visually-hidden">Toggle Dark Mode</span>
             </button>
 
             <!-- Sprachauswahl -->
@@ -38,7 +41,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
 <h1>My GitHub Projects</h1>
         <section id="GitHub1">
             <h2>Weather Dashboard</h2>

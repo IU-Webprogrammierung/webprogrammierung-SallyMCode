@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio</title>
+    <title>GitHub - Mein Portfolio</title>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">
+        Zum Inhalt springen
+    </a>
 
     <header>
         <!-- Navigation -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Hauptnavigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="lebenslauf.html">Lebenslauf</a></li>
-                <li><a href="mailto:info@example.com">Kontakt</a></li>
+                <li><a href="mailto:info@example.com">Kontakt per E-Mail</a></li>
                 <li><a href="fotografien.html">Fotografien</a></li>
                 <li><a href="reiseberichte.html">Reiseberichte</a></li>
                 <li><a href="github.html" aria-current="page">GitHub</a></li>
@@ -26,7 +29,8 @@
 
         <!-- Darkmode -->
         <div class="controls">
-            <button type="button" id="theme-toggle" aria-label="Darkmode umschalten">
+            <button type="button" id="theme-toggle">
+                <span class="visually-hidden">Darkmode umschalten</span>
             </button>
 
             <!-- Sprachauswahl -->
@@ -38,11 +42,11 @@
         </div>
     </header>
 
-    <main>
+<main id="main-content">
         <h1>Meine GitHub-Projekte</h1>
         <section id="GitHub1">
             <h2>Wetter Dashboard</h2>
-            <figure><img src="Fotos/WetterDashboard.jpg" alt="Bild vom Wetter Dashboard" width="200" height="200">
+            <figure><img src="Fotos/WetterDashboard.jpg" alt="Screenshot des Wetter-Dashboards mit Vintage-Design" width="200" height="200">
                 <figcaption>Wetter Dashboard im Vintage-Look</figcaption>
             </figure>
             <p>Ein Wetter-Dashboard im Vintage-Look, das aktuelle Wetterdaten über ein eigenes Node.js-Backend abruft.
@@ -61,15 +65,15 @@
                 <li>API: OpenWeatherMap</li>
             </ul>
             <p>Das Projekt ist auf GitHub verfügbar: <a href="https://github.com/sallymcode/weatherAPP" target="_blank"
-                    rel="noopener noreferrer">Wetter Dashboard auf GitHub</a></p>
+                    rel="noopener noreferrer">Wetter Dashboard auf GitHub (öffnet in neuem Tab)</a></p>
         </section>
 
         <section id="GitHub2">
             <h2>Persönlicher Book Tracker</h2>
-            <figure><img src="Fotos/BookTracker.jpg" alt="Bild von der Book Tracker-Website" width="200" height="200">
+            <figure><img src="Fotos/BookTracker.jpg" alt="Screenshot der Book Tracker-Website" width="200" height="200">
                 <figcaption>Persönlicher Book Tracker</figcaption>
             </figure>
-            <p>Eine persönliche einfache Anwendung, um die eigenen Leseerfolge zu tracken.</p>
+            <p>Eine einfache Anwendung zum Verwalten und Nachverfolgen gelesener Bücher..</p>
             <h3>Features:</h3>
             <ul>
                 <li>Verwaltung von Lesebüchern: Hinzufügen, Bearbeiten und Löschen von Büchern.</li>
@@ -84,14 +88,14 @@
                 <li>Möglichkeit zur Erweiterung von Funktionen und Datenbank</li>
             </ul>
             <p>Das Projekt ist auf GitHub verfügbar: <a href="https://github.com/sallymcode/BookTracker" target="_blank"
-                    rel="noopener noreferrer">Book Tracker auf GitHub</a></p>
+                    rel="noopener noreferrer">Book Tracker auf GitHub (öffnet in neuem Tab)</a></p>
 
         </section>
 
         <section id="GitHub3">
             <h2>IU Quiz Academy</h2>
 
-            <figure><img src="Fotos/QuizAcademy.JPG" alt="Dashboard von IU Quiz Academy" width="200" height="200">
+            <figure><img src="Fotos/QuizAcademy.JPG" alt="Screenshot des Dashboards von IU Quiz Academy" width="200" height="200">
                 <figcaption>Home Page der IU Quiz Academy</figcaption></figure>
 
                 <p>Eine Projektarbeit zur Entwicklung einer Quiz-Anwendung für die IU Quiz Academy.</p>
@@ -108,7 +112,7 @@
                     <li>Backend: Node.js, Express, PostgreSQL</li>
                 </ul>
                 <p>Das Projekt ist auf GitHub verfügbar: <a href="https://github.com/KaiserFDev/iu-quiz-academy"
-                        target="_blank" rel="noopener noreferrer">IU Quiz Academy auf GitHub</a></p>
+                        target="_blank" rel="noopener noreferrer">IU Quiz Academy auf GitHub (öffnet in neuem Tab)</a></p>
         </section>
 
     </main>

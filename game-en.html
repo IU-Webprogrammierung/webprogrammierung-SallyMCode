@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Tic Tac Toe - My Portfolio</title>
 </head>
 
 <body>
-
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
     <header>
         <!-- Navigation -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <ul>
                 <li><a href="index-en.html">Home</a></li>
                 <li><a href="blog-en.html">Blog</a></li>
                 <li><a href="cvitae.html">Curriculum Vitae</a></li>
-                <li><a href="mailto:info@example.com">Contact</a></li>
+                <li><a href="mailto:info@example.com">Contact via Email</a></li>
                 <li><a href="photography.html">Photography</a></li>
                 <li><a href="travel-reports.html">Travel Reports</a></li>
                 <li><a href="github-en.html">GitHub</a></li>
@@ -26,7 +28,8 @@
 
         <!-- Darkmode -->
         <div class="controls">
-            <button type="button" id="theme-toggle" aria-label="Toggle Darkmode">
+            <button type="button" id="theme-toggle">
+                <span class="visually-hidden">Toggle Dark Mode</span>
             </button>
 
             <!-- Sprachauswahl -->
@@ -38,21 +41,22 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <h1>Tic Tac Toe</h1>
 
         <section id="game-section">
-            <div id="game-grid">
+            <h2 class="visually-hidden">Game Grid</h2>
+            <div id="game-grid" role="grid" aria-label="Tic Tac Toe Game Grid" aria-describedby="game-status">
                 <!-- 9 Felder für das Spiel -->
-                <button class="cell" data-index="0" aria-label="Square 1"></button>
-                <button class="cell" data-index="1" aria-label="Square 2"></button>
-                <button class="cell" data-index="2" aria-label="Square 3"></button>
-                <button class="cell" data-index="3" aria-label="Square 4"></button>
-                <button class="cell" data-index="4" aria-label="Square 5"></button>
-                <button class="cell" data-index="5" aria-label="Square 6"></button>
-                <button class="cell" data-index="6" aria-label="Square 7"></button>
-                <button class="cell" data-index="7" aria-label="Square 8"></button>
-                <button class="cell" data-index="8" aria-label="Square 9"></button>
+                <button class="cell" data-index="0" aria-label="Square 1, empty"></button>
+                <button class="cell" data-index="1" aria-label="Square 2, empty"></button>
+                <button class="cell" data-index="2" aria-label="Square 3, empty"></button>
+                <button class="cell" data-index="3" aria-label="Square 4, empty"></button>
+                <button class="cell" data-index="4" aria-label="Square 5, empty"></button>
+                <button class="cell" data-index="5" aria-label="Square 6, empty"></button>
+                <button class="cell" data-index="6" aria-label="Square 7, empty"></button>
+                <button class="cell" data-index="7" aria-label="Square 8, empty"></button>
+                <button class="cell" data-index="8" aria-label="Square 9, empty"></button>
             </div>
 
             <!-- Statusanzeige -->

@@ -4,19 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio</title>
+    <title>Hauptseite -Mein Portfolio</title>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">
+        Zum Inhalt springen
+    </a>
 
     <header>
         <!-- Navigation -->
-        <nav class="navbar">
+         <!-- (ich möchte meine echte E-Mail-Adresse nicht als Kontakt öffentlich angeben, daher Platzhalter) -->
+        <nav class="navbar" aria-label="Hauptnavigation">
             <ul>
                 <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="lebenslauf.html">Lebenslauf</a></li>
-                <li><a href="mailto:info@example.com">Kontakt</a></li>
+                <li><a href="mailto:info@example.com">Kontakt per E-Mail</a></li>
                 <li><a href="fotografien.html">Fotografien</a></li>
                 <li><a href="reiseberichte.html">Reiseberichte</a></li>
                 <li><a href="github.html">GitHub</a></li>
@@ -26,7 +30,8 @@
 
         <!-- Darkmode -->
         <div class="controls">
-            <button type="button" id="theme-toggle" aria-label="Darkmode umschalten">
+            <button type="button" id="theme-toggle">
+                <span class="visually-hidden">Darkmode umschalten</span>
             </button>
 
             <!-- Sprachauswahl -->
@@ -38,7 +43,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section id="about">
             <h1>Willkommen!</h1>
 
@@ -50,25 +55,36 @@
                 bisschen über mich selbst präsentiere.
                 Viel Spaß beim Entdecken und Erkunden! Ich bin 34 Jahre alt und studiere Informatik im Fernstudium.
                 Die letzten 15 Jahre war ich im Handwerk der Akustik tätig und seit neun Jahren bin ich
-                Leiterin von unterschiedlichen Teams in Deutschland im Bereich Heil- und Hilfsmitteln. <br>
-                Um mehr über meinen genauen Weg zu erfahren, klicke auf den <a href="lebenslauf.html">Link</a></p>
+                Leiterin von unterschiedlichen Teams in Deutschland im Bereich Heil- und Hilfsmitteln.</p>
+            <p>Um mehr über meinen genauen Weg zu erfahren, klicke auf meinen<a href="lebenslauf.html">Lebenslauf</a></p>
         </section>
 
         <!-- Blogeinträge -->
         <section id="diary">
             <h2>Tagebuch</h2>
             <!-- Vorschau-Bilder als Links zu den Blogbeiträgen -->
-            <a href="blog-eintrag1.html" title="Geburtstag feiern">
-                <img src="Fotos/Geburtstag.JPG" alt="Foto vom Geburtstag" width="50" height="50">
-            </a>
+            <ul>
 
-            <a href="blog-eintrag2.html" title="Katze in einer Tüte">
-                <img src="Fotos/KatzeTüte.JPG" alt="Foto von einer Katze in einer Tüte" width="50" height="50">
-            </a>
+                <li>
+                    <a href="blog-eintrag1.html" title="Geburtstag feiern">
+                        <img src="Fotos/Geburtstag.JPG" alt="Foto vom Geburtstag" width="50" height="50">
+                        <span>Geburtstag feiern</span>
+                    </a>
+                </li>
 
-            <a href="blog-eintrag3.html" title="Renovierung">
-                <img src="Fotos/Renovierung.jpg" alt="Foto von der Renovierung" width="50" height="50">
-            </a>
+                <li><a href="blog-eintrag2.html" title="Katze in einer Tüte">
+                        <img src="Fotos/KatzeTüte.JPG" alt="Foto von einer Katze in einer Tüte" width="50" height="50">
+                        <span>Mit der Katze spielen</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blog-eintrag3.html" title="Renovierung">
+                    <img src="Fotos/Renovierung.jpg" alt="Foto von der Renovierung" width="50" height="50">
+                    <span>Renovierung</span>
+                </a>
+            </li>
+            </ul>
         </section>
 
         <!-- Flächen zur Weiterleitung Reisen, Fotos und GitHub -->
@@ -87,7 +103,7 @@
                 </li>
                 <li>
                     <a href="github.html" class="tile">
-                        <span>Mein Projekte auf GitHub</span>
+                        <span>Meine Projekte auf GitHub</span>
                     </a>
                 </li>
             </ul>
@@ -95,8 +111,9 @@
 
         <!-- Fläche zur Weiterleitung Game -->
         <section id="game">
-            <a href="game.html" aria-label="Zum Spiel">
-                <img src="Fotos/PlayButton.png" alt="Play Button" width="50">
+            <h2 class="visually-hidden">Spiel</h2>
+            <a href="game.html" aria-label="Spiel starten">
+                <img src="Fotos/PlayButton.png" alt="" width="50">
             </a>
         </section>
 

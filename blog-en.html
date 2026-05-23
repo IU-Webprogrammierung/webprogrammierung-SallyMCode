@@ -4,29 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Blog - My Portfolio</title>
 </head>
 
 <body>
-
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
     <header>
         <!-- Navigation -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <ul>
                 <li><a href="index-en.html">Home</a></li>
                 <li><a href="blog-en.html" aria-current="page">Blog</a></li>
                 <li><a href="cvitae.html">Curriculum Vitae</a></li>
-                <li><a href="mailto:info@example.com">Contact</a></li>
+                <li><a href="mailto:info@example.com">Contact via Email</a></li>
                 <li><a href="photography.html">Photography</a></li>
                 <li><a href="travel-reports.html">Travel Reports</a></li>
                 <li><a href="github-en.html">GitHub</a></li>
-                <li><a href="game.html">Game</a></li>
+                <li><a href="game-en.html">Game</a></li>
             </ul>
         </nav>
 
         <!-- Darkmode -->
         <div class="controls">
-            <button type="button" id="theme-toggle" aria-label="Toggle Darkmode">
+            <button type="button" id="theme-toggle">
+                <span class="visually-hidden">Toggle Dark Mode</span>
             </button>
 
             <!-- Sprachauswahl -->
@@ -38,9 +41,9 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <h1>Blog</h1>
-        <section id="blog1">
+        <article id="blog1">
             <h2>Office Renovation Complete!</h2>
             <figure><img src="Fotos/VorRenovierung.jpg" alt="Office before the renovation" width="200" height="200">
                 <figcaption>Sally's Office before the renovation</figcaption>
@@ -54,9 +57,9 @@
                 sitting in a cluttered room.
                 I’m really looking forward to using the new office and hope it helps me be more productive.
                 Now, all that’s missing is the furniture... but I’m calling it a day for now!</p>
-        </section>
+        </article>
 
-        <section id="blog2">
+        <article id="blog2">
             <h2>Game Afternoon with Marla!</h2>
             <figure><img src="Fotos/KatzeTüte.JPG" alt="Cat in a Bag" width="200" height="200">
                 <figcaption>Cat hiding in the Bag</figcaption>
@@ -66,9 +69,9 @@
                 In the end, her favorite spot was the bag from our last walk. Hard to believe how much the life with a
                 pet enriches us.
                 It's so nice to have her around and I'm looking forward to many more shared days!</p>
-        </section>
+        </article>
 
-        <section id="blog3">
+        <article id="blog3">
             <h2>Birthday</h2>
             <figure><img src="Fotos/Geburtstag.JPG" alt="Sally with Birthday Cake" width="200" height="200">
                 <figcaption>Sally with Birthday Cake</figcaption>
@@ -78,7 +81,7 @@
                 especially for thinking of me! It's so nice to be surrounded by loved ones and I'm grateful for each and
                 every one of them. <br>
                 I'm looking forward to the next year and hope it will be just as nice as this year!</p>
-        </section>
+        </article>
 
     </main>
 

@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio</title>
+    <title>Tic Tac Toe - Mein Portfolio</title>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">
+        Zum Inhalt springen
+    </a>
 
     <header>
         <!-- Navigation -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Hauptnavigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="lebenslauf.html">Lebenslauf</a></li>
-                <li><a href="mailto:info@example.com">Kontakt</a></li>
+                <li><a href="mailto:info@example.com">Kontakt per E-Mail</a></li>
                 <li><a href="fotografien.html">Fotografien</a></li>
                 <li><a href="reiseberichte.html">Reiseberichte</a></li>
                 <li><a href="github.html">GitHub</a></li>
@@ -26,7 +29,8 @@
 
         <!-- Darkmode -->
         <div class="controls">
-            <button type="button" id="theme-toggle" aria-label="Darkmode umschalten">
+            <button type="button" id="theme-toggle">
+                <span class="visually-hidden">Darkmode umschalten</span>
             </button>
 
             <!-- Sprachauswahl -->
@@ -38,21 +42,22 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <h1>Tic Tac Toe</h1>
 
         <section id="game-section">
-            <div id="game-grid">
+            <h2 class="visually-hidden">Spielfeld</h2>
+            <div id="game-grid" role="grid" aria-label="Tic Tac Toe Spielfeld" aria-describedby="game-status">
                 <!-- 9 Felder für das Spiel -->
-                <button class="cell" data-index="0" aria-label="Feld 1"></button>
-                <button class="cell" data-index="1" aria-label="Feld 2"></button>
-                <button class="cell" data-index="2" aria-label="Feld 3"></button>
-                <button class="cell" data-index="3" aria-label="Feld 4"></button>
-                <button class="cell" data-index="4" aria-label="Feld 5"></button>
-                <button class="cell" data-index="5" aria-label="Feld 6"></button>
-                <button class="cell" data-index="6" aria-label="Feld 7"></button>
-                <button class="cell" data-index="7" aria-label="Feld 8"></button>
-                <button class="cell" data-index="8" aria-label="Feld 9"></button>
+                <button role="gridcell" class="cell" data-index="0" aria-label="Feld 1, leer"></button>
+                <button role="gridcell" class="cell" data-index="1" aria-label="Feld 2, leer"></button>
+                <button role="gridcell" class="cell" data-index="2" aria-label="Feld 3, leer"></button>
+                <button role="gridcell" class="cell" data-index="3" aria-label="Feld 4, leer"></button>
+                <button role="gridcell" class="cell" data-index="4" aria-label="Feld 5, leer"></button>
+                <button role="gridcell" class="cell" data-index="5" aria-label="Feld 6, leer"></button>
+                <button role="gridcell" class="cell" data-index="6" aria-label="Feld 7, leer"></button>
+                <button role="gridcell" class="cell" data-index="7" aria-label="Feld 8, leer"></button>
+                <button role="gridcell" class="cell" data-index="8" aria-label="Feld 9, leer"></button>
             </div>
 
             <!-- Statusanzeige -->
@@ -60,9 +65,12 @@
 
             <!-- Steuerung -->
             <div class="game-controls">
-                <button type="button" id="reset-game" aria-label="Spiel neu starten">
-                    <img src="Fotos/play-taste.png" alt="Play Symbol" width="50">
-                    <span class="visually-hidden">Spiel neu starten</span>
+                <button type="button" id="reset-game">
+                    <img src="Fotos/play-taste.png" alt="" width="50">
+
+                    <span class="visually-hidden">
+                        Spiel neu starten
+                    </span>
                 </button>
             </div>
         </section>

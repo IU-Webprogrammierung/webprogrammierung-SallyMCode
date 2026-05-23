@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio</title>
+    <title>Fotografien -Mein Portfolio</title>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">
+        Zum Inhalt springen
+    </a>
 
     <header>
         <!-- Navigation -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Hauptnavigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="lebenslauf.html">Lebenslauf</a></li>
-                <li><a href="mailto:info@example.com">Kontakt</a></li>
+                <li><a href="mailto:info@example.com">Kontakt per E-Mail</a></li>
                 <li><a href="fotografien.html" aria-current="page">Fotografien</a></li>
                 <li><a href="reiseberichte.html">Reiseberichte</a></li>
                 <li><a href="github.html">GitHub</a></li>
@@ -26,7 +29,8 @@
 
         <!-- Darkmode -->
         <div class="controls">
-            <button type="button" id="theme-toggle" aria-label="Darkmode umschalten">
+            <button type="button" id="theme-toggle">
+                <span class="visually-hidden">Darkmode umschalten</span>
             </button>
 
             <!-- Sprachauswahl -->
@@ -38,18 +42,19 @@
         </div>
     </header>
 
-    <main>
+<main id="main-content">
         <h1>Fotografien</h1>
         <section id="landschaften">
             <h2>Landschaftsfotografien</h2>
             <div class="photo-grid">
                 <figure><img src="Fotos/island1.jpg" alt="See im Nebel" width="200" height="200">
+                    <figcaption>Ein See im Nebel auf Island</figcaption>
                 </figure>
                 <figure><img src="Fotos/island2.jpg" alt="See mit Wolkendecke" width="200" height="200">
                     <figcaption>Ein See mit Wolkendecke auf Island</figcaption>
                 </figure>
                 <figure><img src="Fotos/island3.jpg" alt="Meer auf Island" width="200" height="200">
-                    <figcaption>Ein Meer auf Island</figcaption>
+                    <figcaption>Das Meer vor der Küste Islands</figcaption>
                 </figure>
             </div>
 
@@ -76,7 +81,7 @@
                 <figure><img src="Fotos/pilze.jpg" alt="Pilze wachsen auf einem Baumstamm" width="200" height="200">
                     <figcaption>Pilze wachsen auf einem Baumstamm im Wald</figcaption>
                 </figure>
-                <figure><img src="Fotos/feld.jpg" alt="Ein Kornfeld im Sommer" width="200" height="200">
+                <figure><img src="Fotos/feld.jpg" alt="Kornfeld" width="200" height="200">
                     <figcaption>Ein Kornfeld im Sommer</figcaption>
                 </figure>
                 <figure><img src="Fotos/baum.jpg" alt="Ein großer Baum von unten betrachtet" width="200" height="200">

@@ -4,19 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio</title>
+    <title>Blog - Mein Portfolio</title>
 </head>
 
 <body>
 
+    <a href="#main-content" class="skip-link">
+        Zum Inhalt springen
+    </a>
+
     <header>
         <!-- Navigation -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Hauptnavigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="blog.html" aria-current="page">Blog</a></li>
                 <li><a href="lebenslauf.html">Lebenslauf</a></li>
-                <li><a href="mailto:info@example.com">Kontakt</a></li>
+                <li><a href="mailto:info@example.com">Kontakt per E-Mail</a></li>
                 <li><a href="fotografien.html">Fotografien</a></li>
                 <li><a href="reiseberichte.html">Reiseberichte</a></li>
                 <li><a href="github.html">GitHub</a></li>
@@ -26,7 +30,8 @@
 
         <!-- Darkmode -->
         <div class="controls">
-            <button type="button" id="theme-toggle" aria-label="Darkmode umschalten">
+            <button type="button" id="theme-toggle">
+                <span class="visually-hidden">Darkmode umschalten</span>
             </button>
 
             <!-- Sprachauswahl -->
@@ -38,51 +43,68 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <h1>Blog</h1>
-        <section id="blog1">
+
+        <article id="buero-renovierung">
             <h2>Bürorenovierung fertig!</h2>
+            <p>
+                <time datetime="2025-08-26">
+                    26. August 2025
+                </time>
+            </p>
             <figure><img src="Fotos/VorRenovierung.jpg" alt="Büro vor der Renovierung" width="200" height="200">
-                <figcaption>Sallys Büros vor der Renovierung</figcaption>
+                <figcaption>Sallys Büro vor der Renovierung</figcaption>
             </figure>
             <figure><img src="Fotos/Renovierung.jpg" alt="Büro nach der Renovierung" width="200" height="200">
-                <figcaption>Sallys Büros nach der Renovierung</figcaption>
+                <figcaption>Sallys Büro nach der Renovierung</figcaption>
             </figure>
-            <p>Endlich ist es soweit, mein Büro ist fertig tapeziert und gestrichen. Kein Vergleich zu Vorher. Die alten
+            <p>Endlich ist es soweit, mein Büro ist fertig tapeziert und gestrichen. Kein Vergleich zu vorher. Die alten
                 Wände sehen jetzt ganz anders aus!
                 Es hat zwar eine Weile gedauert, aber es hat sich gelohnt. Jetzt kann ich mich endlich wieder auf meine
-                Arbeit konzentrieren und muss nicht mehr in einem unordentlichen Raum sitzen. <br>
-                Ich freue mich schon darauf, das neue Büro zu nutzen und hoffe, dass es mir dabei hilft, produktiver zu
-                sein. <br>
-                Fehlen nur noch die Möbel... Heute mache ich aber nichts mehr!</p>
-        </section>
+                Arbeit konzentrieren und muss nicht mehr in einem unordentlichen Raum sitzen. </p>
+            <p>Ich freue mich schon darauf, das neue Büro zu nutzen und hoffe, dass es mir dabei hilft, produktiver zu
+                sein. </p>
+            <p>Fehlen nur noch die Möbel... Heute mache ich aber nichts mehr!</p>
+        </article>
 
-        <section id="blog2">
+        <article id="spielnachmittag-mit-marla">
             <h2>Spielnachmittag mit Marla!</h2>
-            
+            <p>
+                <time datetime="2023-06-15">
+                    15. Juni 2023
+                </time>
+            </p>
+
             <figure><img src="Fotos/KatzeTüte.JPG" alt="Katze in einer Tüte" width="200" height="200">
                 <figcaption>Katze versteckt sich in der Tüte</figcaption>
             </figure>
-            <p>Unser neues Familienmitglied hat sich endlich eingelebt! Marla scheint sich pudelwohl (haha, Pudel...) zu
+            <p>Unser neues Familienmitglied hat sich endlich eingelebt! Marla scheint sich wirklich pudelwohl zu
                 fühlen. Wir haben den Nachmittag mit Schmusen und Spielen verbracht.
                 Am Ende war ihr Lieblingsort, der in der Tüte vom letzten Bummeltrip. Kaum zu glauben, wie sehr das
                 Leben mit einem Haustier bereichert wird. Es ist so schön, sie um sich zu haben und ich freue mich schon
                 auf viele weitere gemeinsame Tage!</p>
-            
-        </section>
 
-        <section id="blog3">
+        </article>
+
+        <article id="geburtstag">
             <h2>Geburtstag</h2>
-            
+            <p>
+                <time datetime="2020-10-18">
+                    18. Oktober 2020
+                </time>
+            </p>
+
             <figure><img src="Fotos/Geburtstag.JPG" alt="Sally mit Geburtstagskuchen" width="200" height="200">
                 <figcaption>Sally mit Geburtstagskuchen</figcaption>
             </figure>
             <p>Meine Schwester war so lieb mir zu meinem Geburtstag einen wunderschönen und super leckeren Kuchen zu
                 backen. Danke für den schönen Tag, die tollen Geschenke und
                 vor allem für das an mich Denken! Es ist so schön, von lieben Menschen umgeben zu sein und ich bin
-                dankbar für jeden einzelnen von ihnen. <br>
+                dankbar für jeden einzelnen von ihnen. </p>
+            <p>
                 Ich freue mich schon auf das nächste Jahr und hoffe, dass es genauso schön wird wie dieses Jahr!</p>
-        </section>
+        </article>
 
     </main>
 

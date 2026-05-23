@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio</title>
+    <title>Reiseberichte - Mein Portfolio</title>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">
+        Zum Inhalt springen
+    </a>
 
     <header>
         <!-- Navigation -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Hauptnavigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="lebenslauf.html">Lebenslauf</a></li>
-                <li><a href="mailto:info@example.com">Kontakt</a></li>
+                <li><a href="mailto:info@example.com">Kontakt per E-Mail</a></li>
                 <li><a href="fotografien.html">Fotografien</a></li>
                 <li><a href="reiseberichte.html" aria-current="page">Reiseberichte</a></li>
                 <li><a href="github.html">GitHub</a></li>
@@ -26,7 +29,8 @@
 
         <!-- Darkmode -->
         <div class="controls">
-            <button type="button" id="theme-toggle" aria-label="Darkmode umschalten">
+            <button type="button" id="theme-toggle">
+                <span class="visually-hidden">Darkmode umschalten</span>
             </button>
 
             <!-- Sprachauswahl -->
@@ -38,10 +42,15 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <h1>Reiseberichte</h1>
-        <section id="travel1">
+        <article id="travel1">
             <h2>Urlaub in Irland</h2>
+                        <p>
+                <time datetime="2019-07-14">
+                    14. Juli 2019
+                </time>
+            </p>
             <figure><img src="Fotos/Irland.JPG" alt="Die Cliffs of Moher in Irland bei Tageslicht" width="200" height="200">
                 <figcaption>Irländische Landschaft - Klippen am Meer</figcaption>
             </figure>
@@ -52,36 +61,44 @@
                 Kaum zu glauben, aber es gibt Leute, die für ein schönes Foto alles
                 machen. Die Hänge runterklettern ist lebensgefährlich und kein Bild der Welt wert. Es gibt auch so genug
                 zu bestaunen. Selten hat mich eine Landschaft so beeindruckt.</p>
-        </section>
+        </article>
 
-        <section id="travel2">
+        <article id="travel2">
             <h2>Dänemark - Wir hatten eine schöne Zeit!</h2>
-
+                        <p>
+                <time datetime="2018-08-10">
+                    10. August 2018
+                </time>
+            </p>
             <figure><img src="Fotos/Dänemark.JPG" alt="Hafen in Dänemark" width="200" height="200">
                 <figcaption>Hafen in Dänemark</figcaption>
             </figure>
             <p>Unser Besuch in Dänemark war wirklich wunderbar! Die schöne Landschaft und die freundliche Bevölkerung
                 haben uns sehr beeindruckt.
                 Wir haben viel Zeit am Hafen verbracht und die lokale Kultur entdeckt. Die Ruhe hat sehr
-                geholfen, um endlich einmal richtig runterzukommen. Was war vor allem angenehm und erschreckend
-                zugleich? Diese absolute Stille. Keine Fahrzeuggeräusche. Kein Lärm von irgendwelchen Maschinen.
+                geholfen, um endlich einmal richtig runterzukommen. Was dabei besonders angenehm und gleichzeitig ungewohnt war:
+                 Diese absolute Stille. Keine Fahrzeuggeräusche. Kein Lärm von irgendwelchen Maschinen.
                 Wir kommen gerne wieder.</p>
-        </section>
+        </article>
 
-        <section id="travel3">
+        <article id="travel3">
             <h2>Wir bleiben in Deutschland</h2>
-
-            <figure><img src="Fotos/Partnachklamm.JPG" alt="Partnachklamm" width="200" height="200">
+                        <p>
+                <time datetime="2020-09-19">
+                    19. September 2020
+                </time>
+            </p>
+            <figure><img src="Fotos/Partnachklamm.JPG" alt="Partnachklamm in Bayern" width="200" height="200">
                 <figcaption>Wasserfall der Partnachklamm</figcaption>
             </figure>
-            <p>Anstatt wieder zu Fliegen, haben wir entschieden, unsere Zeit in Deutschland zu verbringen. Die
+            <p>Anstatt wieder zu fliegen, haben wir entschieden, unsere Zeit in Deutschland zu verbringen. Die
                 natürliche Schönheit und die ruhige Atmosphäre haben uns sehr beeindruckt. Wir haben viel Zeit in der
                 Natur verbracht.
                 Endlich konnte ich die Partnachklamm besuchen, die schon so lange auf meiner Liste stand. Das Foto kann
                 es kaum festhalten, wie beeindruckend die Klamm wirklich ist. Wer die Gelegenheit bekommt, sollte sie
                 unbedingt einmal besuchen. Also, auch in Deutschland gibt es wahnsinnig schöne Orte.
             </p>
-        </section>
+        </article>
 
     </main>
 
