@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+
+    <script src="js/script.js" defer></script>
     <title>Blog - Mein Portfolio</title>
 </head>
 
@@ -14,33 +17,6 @@
     </a>
 
     <header>
-        <!-- Navigation -->
-        <nav class="navbar" aria-label="Hauptnavigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html" aria-current="page">Blog</a></li>
-                <li><a href="lebenslauf.html">Lebenslauf</a></li>
-                <li><a href="mailto:info@example.com">Kontakt per E-Mail</a></li>
-                <li><a href="fotografien.html">Fotografien</a></li>
-                <li><a href="reiseberichte.html">Reiseberichte</a></li>
-                <li><a href="github.html">GitHub</a></li>
-                <li><a href="game.html">Game</a></li>
-            </ul>
-        </nav>
-
-        <!-- Darkmode -->
-        <div class="controls">
-            <button type="button" id="theme-toggle">
-                <span class="visually-hidden">Darkmode umschalten</span>
-            </button>
-
-            <!-- Sprachauswahl -->
-            <label for="language-select" class="visually-hidden">Sprache auswählen</label>
-            <select id="language-select" onchange="location = this.value;">
-                <option value="blog.html" selected>DE</option>
-                <option value="blog-en.html">EN</option>
-            </select>
-        </div>
     </header>
 
     <main id="main-content">
@@ -109,7 +85,6 @@
     </main>
 
     <footer>
-        <p>Mein Portfolio, 2026</p>
     </footer>
 
 </body>
