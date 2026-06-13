@@ -1,27 +1,56 @@
 <!-- Navigation -->
-        <nav class="navbar" aria-label="Main navigation">
-            <ul>
-                <li><a href="index-en.html">Home</a></li>
-                <li><a href="blog-en.html">Blog</a></li>
-                <li><a href="cvitae.html">Curriculum Vitae</a></li>
-                <li><a href="mailto:info@example.com">Contact via Email</a></li>
-                <li><a href="photography.html">Photography</a></li>
-                <li><a href="travel-reports.html">Travel Reports</a></li>
-                <li><a href="github-en.html">GitHub</a></li>
-                <li><a href="game-en.html">Game</a></li>
-            </ul>
-        </nav>
+<nav class="navbar" aria-label="Main navigation">
 
-        <!-- Darkmode -->
-        <div class="controls">
-            <button type="button" id="theme-toggle">
-                <span class="visually-hidden">Toggle Dark Mode</span>
-            </button>
+    <div class="home">
+        <a href="index-en.html">Home</a>
+    </div>
 
-            <!-- Sprachauswahl -->
-            <label for="language-select" class="visually-hidden">
-                Choose Language
-            </label>
-            <select id="language-select">
-            </select>
-        </div>
+    <!-- Mobile Menü -->
+    <details class="menu-dropdown">
+        <summary>☰ Menu</summary>
+
+        <ul>
+            <li><a href="blog-en.html">Blog</a></li>
+            <li><a href="cvitae.html">CV</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="travel-reports.html">Travel Reports</a></li>
+            <li><a href="github-en.html">GitHub</a></li>
+            <li><a href="game-en.html">Game</a></li>
+        </ul>
+    </details>
+
+    <div class="mobile-menu">
+        <a href="mailto:info@example.com">
+            Contact
+        </a>
+        <a href="#top" aria-label="Back to top">
+            ↑ Top
+        </a>
+    </div>
+
+    <!-- Desktop Menü -->
+    <ul class="desktop-menu">
+        <li><a href="index-en.html">Home</a></li>
+        <li><a href="blog-en.html">Blog</a></li>
+        <li><a href="cvitae.html">CV</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="travel-reports.html">Travel Reports</a></li>
+        <li><a href="github-en.html">GitHub</a></li>
+        <li><a href="game-en.html">Game</a></li>
+        <li><a href="mailto:info@example.com">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Darkmode -->
+<div class="controls">
+    <button type="button" id="theme-toggle">🌙
+        <span class="visually-hidden">Toggle Dark Mode</span>
+    </button>
+
+    <!-- Sprachauswahl -->
+    <label for="language-select" class="visually-hidden">
+        Choose Language
+    </label>
+    <select id="language-select">
+    </select>
+</div>

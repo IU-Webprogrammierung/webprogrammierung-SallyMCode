@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Hauptseite -Mein Portfolio</title>
+    <title>Hauptseite - Mein Portfolio</title>
     <script src="js/script.js" defer></script>
 </head>
 
-<body>
+<body id="top">
     <a href="#main-content" class="skip-link">
         Zum Inhalt springen
     </a>
@@ -18,10 +18,11 @@
     </header>
 
     <main id="main-content">
+
         <section id="about">
             <h1>Willkommen!</h1>
-
-            <figure><img src="Fotos/Profil3.JPG" alt="Profilbild von Sally" width="200" height="200">
+            <figure>
+                <img src="Fotos/Profil3.JPG" alt="Profilbild von Sally" width="200" height="200">
                 <figcaption>Sally - Informatikstudentin & Akustik-Expertin</figcaption>
             </figure>
 
@@ -30,34 +31,32 @@
                 Viel Spaß beim Entdecken und Erkunden! Ich bin 34 Jahre alt und studiere Informatik im Fernstudium.
                 Die letzten 15 Jahre war ich im Handwerk der Akustik tätig und seit neun Jahren bin ich
                 Leiterin von unterschiedlichen Teams in Deutschland im Bereich Heil- und Hilfsmitteln.</p>
-            <p>Um mehr über meinen genauen Weg zu erfahren, klicke auf meinen<a href="lebenslauf.html">Lebenslauf</a></p>
+            <p>Um mehr über meinen genauen Weg zu erfahren, klicke auf meinen <a href="lebenslauf.html">Lebenslauf</a>
+            </p>
         </section>
 
         <!-- Blogeinträge -->
         <section id="diary">
             <h2>Tagebuch</h2>
-            <!-- Vorschau-Bilder als Links zu den Blogbeiträgen -->
             <ul>
-
                 <li>
-                    <a href="blog-eintrag1.html" title="Geburtstag feiern">
+                    <a href="blog.html#geburtstag" title="Geburtstag feiern">
                         <img src="Fotos/Geburtstag.JPG" alt="Foto vom Geburtstag" width="50" height="50">
-                        <span>Geburtstag feiern</span>
+                        <span>Geburtstagsfeier</span>
                     </a>
                 </li>
-
-                <li><a href="blog-eintrag2.html" title="Katze in einer Tüte">
+                <li>
+                    <a href="blog.html#spielnachmittag-mit-marla" title="Katze in einer Tüte">
                         <img src="Fotos/KatzeTüte.JPG" alt="Foto von einer Katze in einer Tüte" width="50" height="50">
                         <span>Mit der Katze spielen</span>
                     </a>
                 </li>
-
                 <li>
-                    <a href="blog-eintrag3.html" title="Renovierung">
-                    <img src="Fotos/Renovierung.jpg" alt="Foto von der Renovierung" width="50" height="50">
-                    <span>Renovierung</span>
-                </a>
-            </li>
+                    <a href="blog.html#buero-renovierung" title="Renovierung">
+                        <img src="Fotos/Renovierung.jpg" alt="Foto von der Renovierung" width="50" height="50">
+                        <span>Bürorenovierung</span>
+                    </a>
+                </li>
             </ul>
         </section>
 
@@ -85,9 +84,10 @@
 
         <!-- Fläche zur Weiterleitung Game -->
         <section id="game">
-            <h2 class="visually-hidden">Spiel</h2>
-            <a href="game.html" aria-label="Spiel starten">
-                <img src="Fotos/PlayButton.png" alt="" width="50">
+            <h2>Eine Runde spielen</h2>
+            <a href="game.html" aria-label="Spiel starten" class="game-start-btn">
+                <img src="Fotos/PlayButton.png" alt="" width="40">
+                <span>Mini-Game starten →</span>
             </a>
         </section>
 

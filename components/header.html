@@ -1,28 +1,62 @@
-        <!-- Navigation -->
-         <!-- (ich möchte meine echte E-Mail-Adresse nicht als Kontakt öffentlich angeben, daher Platzhalter) -->
-        <nav class="navbar" aria-label="Hauptnavigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="lebenslauf.html">Lebenslauf</a></li>
-                <li><a href="mailto:info@example.com">Kontakt per E-Mail</a></li>
-                <li><a href="fotografien.html">Fotografien</a></li>
-                <li><a href="reiseberichte.html">Reiseberichte</a></li>
-                <li><a href="github.html">GitHub</a></li>
-                <li><a href="game.html">Game</a></li>
-            </ul>
-        </nav>
+<!-- Navigation -->
 
-        <!-- Darkmode -->
-        <div class="controls">
-            <button type="button" id="theme-toggle">
-                <span class="visually-hidden">Darkmode umschalten</span>
-            </button>
+<!-- (ich möchte meine echte E-Mail-Adresse nicht als Kontakt öffentlich angeben, daher Platzhalter) -->
+<nav class="navbar" aria-label="Hauptnavigation">
 
-            <!-- Sprachauswahl -->
-            <label for="language-select" class="visually-hidden">
-                Sprache auswählen
-            </label>
-            <select id="language-select">
-            </select>
-        </div>
+    <div class="home">
+        <a href="index.html">Home</a>
+    </div>
+
+    <!-- Mobile Menü -->
+    <details class="menu-dropdown">
+        <summary>☰ Menü</summary>
+        <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="lebenslauf.html">Lebenslauf</a></li>
+            <li><a href="fotografien.html">Fotografien</a></li>
+            <li><a href="reiseberichte.html">Reiseberichte</a></li>
+            <li><a href="github.html">GitHub</a></li>
+            <li><a href="game.html">Game</a></li>
+        </ul>
+    </details>
+
+
+    <div class="mobile-menu">
+        <a href="mailto:info@example.com">
+            Kontakt
+        </a>
+        <a href="#top" aria-label="Zum Seitenanfang">
+            ↑ Top
+        </a>
+    </div>
+
+    <!-- Desktop Menü -->
+    <ul class="desktop-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="lebenslauf.html">Lebenslauf</a></li>
+        <li><a href="fotografien.html">Fotografien</a></li>
+        <li><a href="reiseberichte.html">Reiseberichte</a></li>
+        <li><a href="github.html">GitHub</a></li>
+        <li><a href="game.html">Game</a></li>
+        <li><a href="mailto:info@example.com">Kontakt</a></li>
+    </ul>
+</nav>
+
+
+<!-- Darkmode -->
+<div class="controls">
+    <button type="button" id="theme-toggle">🌙
+
+        <span class="visually-hidden">Darkmode umschalten</span>
+
+    </button>
+
+    <!-- Sprachauswahl -->
+    <label for="language-select" class="visually-hidden">
+        Sprache auswählen
+    </label>
+    <select id="language-select">
+    </select>
+
+</div>
