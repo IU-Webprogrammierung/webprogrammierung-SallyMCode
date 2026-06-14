@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
     <script src="js/script.js" defer></script>
     <title>Tic Tac Toe - My Portfolio</title>
 </head>
@@ -24,15 +23,15 @@
             <h2 class="visually-hidden">Game Grid</h2>
             <div id="game-grid" role="grid" aria-label="Tic Tac Toe Game Grid" aria-describedby="game-status">
                 <!-- 9 Felder für das Spiel -->
-                <button class="cell" data-index="0" aria-label="Square 1, empty"></button>
-                <button class="cell" data-index="1" aria-label="Square 2, empty"></button>
-                <button class="cell" data-index="2" aria-label="Square 3, empty"></button>
-                <button class="cell" data-index="3" aria-label="Square 4, empty"></button>
-                <button class="cell" data-index="4" aria-label="Square 5, empty"></button>
-                <button class="cell" data-index="5" aria-label="Square 6, empty"></button>
-                <button class="cell" data-index="6" aria-label="Square 7, empty"></button>
-                <button class="cell" data-index="7" aria-label="Square 8, empty"></button>
-                <button class="cell" data-index="8" aria-label="Square 9, empty"></button>
+                <button class="cell" role="gridcell" data-index="0" aria-label="Square 1, empty"></button>
+                <button class="cell" role="gridcell" data-index="1" aria-label="Square 2, empty"></button>
+                <button class="cell" role="gridcell" data-index="2" aria-label="Square 3, empty"></button>
+                <button class="cell" role="gridcell" data-index="3" aria-label="Square 4, empty"></button>
+                <button class="cell" role="gridcell" data-index="4" aria-label="Square 5, empty"></button>
+                <button class="cell" role="gridcell" data-index="5" aria-label="Square 6, empty"></button>
+                <button class="cell" role="gridcell" data-index="6" aria-label="Square 7, empty"></button>
+                <button class="cell" role="gridcell" data-index="7" aria-label="Square 8, empty"></button>
+                <button class="cell" role="gridcell" data-index="8" aria-label="Square 9, empty"></button>
             </div>
 
             <!-- Statusanzeige -->
@@ -41,7 +40,7 @@
             <!-- Steuerung -->
             <div class="game-controls">
                 <button type="button" id="reset-game" aria-label="Reset Game">
-                    <img src="Fotos/play-taste.png" alt="Play Symbol" width="50">
+                    <img src="Fotos/play-taste.png" alt="" width="50">
                     <span class="visually-hidden">Reset Game</span>
                 </button>
             </div>
