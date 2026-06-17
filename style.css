@@ -1,0 +1,1022 @@
+/*  GLOBAL RESET & BASIS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #7d9d9c;
+    --secondary-color: #d8b4a0;
+    --background-color: #f7f1e5;
+    --text-color: #4a403a;
+    --border-color: #c9b8a3;
+    /* Trennlinienfarbe */
+}
+
+body {
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+:focus-visible {
+    outline: 2px solid var(--text-color);
+    outline-offset: 3px;
+}
+
+
+/* ACCESSIBILITY & UTILITIES */
+.skip-link {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link:focus {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 1rem;
+    clip-path: none;
+    top: 0;
+    left: 0;
+    background: var(--text-color);
+    color: var(--background-color);
+    z-index: 9999;
+    border: 1px solid var(--border-color);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* HEADER & CONTROLS (Kopfbereich & Schalter) */
+header {
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+    min-height: 4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.controls button,
+.controls select {
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.controls button:hover,
+.controls select:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* NAVIGATION (Mobile-Ansicht unten fixiert) */
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-top: 2px solid var(--text-color);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.5rem;
+}
+
+.navbar a,
+.menu-dropdown summary {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.menu-dropdown {
+    position: relative;
+}
+
+.menu-dropdown summary {
+    list-style: none;
+    user-select: none;
+}
+
+.menu-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu-dropdown ul {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background: var(--background-color);
+    min-width: 240px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0px;
+    border: 2px solid var(--text-color);
+}
+
+.menu-dropdown li {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.menu-dropdown li:last-child {
+    border-bottom: none;
+}
+
+.menu-dropdown a {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.menu-dropdown a:hover,
+.menu-dropdown a:focus {
+    background-color: var(--secondary-color);
+}
+
+.desktop-menu {
+    display: none;
+}
+
+
+/* MAIN CONTENT & SECTIONS (Basis-Layout Mobil) */
+main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem 7rem 1.5rem;
+}
+
+main section,
+main article {
+    padding: 3rem 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+main section:last-of-type,
+main article:last-of-type {
+    border-bottom: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    max-width: 65ch;
+}
+
+p a {
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    font-weight: 600;
+}
+
+p a:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Meta-Daten (Datum) */
+time,
+.blog-meta {
+    font-family: system-ui, sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-color);
+    opacity: 0.7;
+    display: block;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Bilder-Rahmen im Passepartout-Stil */
+main article figure,
+main section figure,
+.blog-article figure {
+    background: white;
+    border: 1px solid var(--text-color);
+    padding: 8px 8px 12px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+main article img,
+main section img,
+.blog-article img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main article figcaption,
+main section figcaption,
+.blog-article figcaption {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.6rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    text-align: center;
+}
+
+
+/* GLOBALE UNTERSEITEN & STARTSEITEN-STYLES (Kachel-Konzepte) */
+/* --- STARTSEITE & GITHUB GLOBAL KACHELN (Mobil-Basis) --- */
+body:has(#about) main section,
+body:has(#github1) main section {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+body:has(#about) main section:last-of-type,
+body:has(#github1) main section:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Spezifisches Kachel-Styling für #about */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#about img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 1px solid var(--text-color);
+    padding: 8px;
+    background: white;
+}
+
+/* Spezifisches Kachel-Styling für #diary (Tagebuch) */
+#diary ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#diary li {
+    border-left: 3px solid var(--secondary-color);
+    padding-left: 1.25rem;
+}
+
+#diary a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#diary img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+}
+
+#diary span {
+    font-family: Georgia, serif;
+    font-size: 1.2rem;
+}
+
+#diary a:hover span {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Spezifisches Kachel-Styling für #quick-links (Mehr entdecken) */
+.tile-container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--border-color);
+}
+
+.tile-container li {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tile {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 0.5rem;
+    background: transparent;
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 1.2rem;
+    transition: background-color 0.2s, padding-left 0.2s;
+}
+
+.tile:hover,
+.tile:focus {
+    background-color: var(--background-color);
+    padding-left: 1rem;
+}
+
+/* Spezifisches Kachel-Styling für #game (Mini-Game Box auf Startseite) */
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.game-start-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid var(--text-color);
+    background: white;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+    max-width: 280px;
+    width: 100%;
+}
+
+.game-start-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- GITHUB DETAILSEITE --- */
+body:has(#github1) main section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+body:has(#github1) main section li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+body:has(#github1) main section li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* --- TIC TAC TOE GAME SEITE (Spiel-Kachel) --- */
+#game-section {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 2.5rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    background-color: var(--text-color);
+    padding: 6px;
+    border-radius: 2px;
+    width: clamp(300px, 60vw, 600px);
+    aspect-ratio: 1 / 1;
+    margin-bottom: 1.5rem;
+}
+
+.cell {
+    background-color: white;
+    border: none;
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s ease;
+}
+
+.cell:hover:not(.x):not(.o) {
+    background-color: var(--background-color);
+}
+
+.cell.x {
+    color: var(--primary-color);
+}
+
+.cell.o {
+    color: var(--secondary-color);
+}
+
+#game-status {
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.game-controls {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#reset-game {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+#reset-game:hover {
+    background-color: var(--background-color);
+    border-color: var(--text-color);
+}
+
+#reset-game img {
+    width: 28px;
+    height: auto;
+    opacity: 0.8;
+}
+
+#reset-game:hover img {
+    opacity: 1;
+}
+
+/* --- BLOG SEITE --- */
+.blog-main {
+    width: 100%;
+}
+
+.blog-heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 1rem;
+}
+
+/* Artikel: scharf abgegrenzten Kachel */
+.blog-article {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.blog-article:last-of-type {
+    margin-bottom: 0;
+}
+
+.blog-article h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Bild-Layouts innerhalb des Blogs */
+.blog-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/*  Galerie-Bilder mobil nicht zu groß */
+.blog-gallery figure {
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+/* Einzelbilder auf eine bestimmte Breite begrenzen */
+.blog-single-image {
+    max-width: 340px;
+    margin-bottom: 1.5rem;
+}
+
+/* --- LEBENSLAUF SEITE --- */
+.contact-links {
+    padding: 1.5rem 0 3rem 0;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.contact-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+}
+
+.contact-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--text-color);
+    background-color: white;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.contact-links li:nth-child(1) a:hover {
+    background-color: var(--secondary-color);
+}
+
+.contact-links li:nth-child(2) a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#school,
+#work,
+#qualifications {
+    padding: 3.5rem 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.list-group {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-group-item {
+    position: relative;
+    padding: 1.2rem 1rem 1.2rem 1.5rem;
+    border-left: 2px solid var(--text-color);
+    margin-left: 0.5rem;
+    color: var(--text-color);
+    font-size: 1.05rem;
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+}
+
+.list-group-item::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 1.6rem;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--text-color);
+}
+
+/* --- FOTOGRAFIEN SEITE --- */
+#landschaften,
+#tiere,
+#pflanzen {
+    padding: 3.5rem 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.photo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.photo-grid figure {
+    background-color: #ffffff;
+    border: 1px solid var(--text-color);
+    padding: 12px 12px 18px 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin: 0;
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.photo-grid figure:hover {
+    transform: scale(1.02);
+}
+
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    background-color: var(--background-color);
+}
+
+
+/* FOOTER */
+footer {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
+
+.footer-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    transition: color 0.2s;
+    line-height: 1.4;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-links .back-to-top {
+    color: var(--primary-color);
+}
+
+.footer-tech {
+    font-family: system-ui, sans-serif;
+    opacity: 0.7;
+    letter-spacing: 0.02em;
+    margin-top: 0;
+    margin: 0;
+}
+
+
+/*  DESKTOP MEDIA QUERY (Ab 768px Breite)   */
+@media (min-width: 768px) {
+
+    /* --- Navigation Oben --- */
+    .home {
+        display: none;
+    }
+
+    nav {
+        position: relative;
+        border-top: none;
+    }
+
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 2px solid var(--text-color);
+        background-color: var(--background-color);
+        padding: 1.5rem 2rem;
+    }
+
+    .menu-dropdown {
+        display: none;
+    }
+
+    .desktop-menu {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .desktop-menu a {
+        color: var(--text-color);
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .desktop-menu a:hover,
+    .desktop-menu a[aria-current="page"] {
+        color: var(--primary-color);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+
+
+    /* --- UNTERSEITEN- & STARTSEITEN-STEUERUNG (Lineare Inhalts-Container ab 768px) --- */
+    body:has(#about) #main-content,
+    .blog-main,
+    body:has(#school) #main-content,
+    body:has(#landschaften) #main-content,
+    body:has(#travel1) #main-content,
+    body:has(#github1) #main-content,
+    body:has(#game-section) #main-content {
+        display: block !important;
+        margin: 0 auto;
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+
+    /* Desktop: STARTSEITE */
+    body:has(#about) #main-content {
+        max-width: 850px;
+    }
+
+    body:has(#about) main section {
+        padding: 3.5rem;
+        margin-bottom: 3.5rem;
+    }
+
+    body:has(#about) #about {
+        display: block;
+        text-align: left;
+    }
+
+    body:has(#about) #about figure {
+        float: left;
+        margin-right: 2.5rem;
+        margin-bottom: 1.5rem;
+        max-width: 240px;
+    }
+
+    body:has(#about) #diary li {
+        padding-left: 2rem;
+    }
+
+    body:has(#about) #diary img {
+        width: 90px;
+        height: 90px;
+    }
+
+    body:has(#about) .tile {
+        padding: 1.5rem 1rem;
+    }
+
+    /*Desktop: BLOG */
+    .blog-main {
+        max-width: 1140px;
+    }
+
+    .blog-main .blog-gallery {
+        flex-direction: row;
+    }
+
+    .blog-main .blog-gallery figure {
+        flex: 1;
+    }
+
+    /*Desktop: LEBENSLAUF */
+    body:has(#school) #main-content {
+        max-width: 800px;
+    }
+
+    .contact-links ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .contact-links li {
+        flex: 1;
+    }
+
+    .list-group-item {
+        padding-left: 2.5rem;
+        margin-left: 1rem;
+    }
+
+    .list-group-item::before {
+        left: -6px;
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Desktop: FOTOGRAFIEN */
+    body:has(#landschaften) #main-content {
+        max-width: 1400px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    body:has(#landschaften) .photo-grid {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 2rem;
+    }
+
+    body:has(#landschaften) .photo-grid figure {
+        flex: 1;
+        max-width: calc(33.333% - 1.35rem);
+        padding: 16px 16px 24px 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    body:has(#landschaften) .photo-grid img {
+        height: 380px;
+        object-fit: cover;
+        flex-grow: 1;
+    }
+
+    body:has(#landschaften) .photo-grid figcaption {
+        margin-top: auto;
+        padding-top: 1rem;
+    }
+
+    /*Desktop: REISEBERICHTE */
+    body:has(#travel1) #main-content {
+        max-width: 950px;
+    }
+
+    body:has(#travel1) main article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem 4rem;
+        align-items: start;
+        padding: 4rem 0;
+    }
+
+    body:has(#travel1) main article h2,
+    body:has(#travel1) main article p:has(time) {
+        grid-column: 1 / -1;
+        margin-bottom: 0;
+    }
+
+    body:has(#travel1) main article p:has(time) {
+        margin-top: -1.5rem;
+    }
+
+    body:has(#travel1) main article figure {
+        grid-column: 1;
+        margin-bottom: 0;
+    }
+
+    body:has(#travel1) main article figure img {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    body:has(#travel1) main article p:last-of-type {
+        grid-column: 2;
+        margin-bottom: 0;
+        font-size: 1.05rem;
+    }
+
+    body:has(#travel1) main article:nth-of-type(even) figure {
+        grid-column: 2;
+    }
+
+    body:has(#travel1) main article:nth-of-type(even) p:last-of-type {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    /* Desktop: GITHUB PROJEKTE */
+    body:has(#github1) #main-content {
+        max-width: 850px;
+    }
+
+    body:has(#github1) main section {
+        padding: 3rem;
+        margin-bottom: 3.5rem;
+    }
+
+    body:has(#github1) main section figure {
+        max-width: 450px;
+        margin-bottom: 2rem;
+    }
+
+    /* Desktop: TIC TAC TOE */
+    body:has(#game-section) #main-content {
+        max-width: 900px;
+    }
+
+    body:has(#game-section) #game-section {
+        max-width: 700px;
+        padding: 3rem;
+    }
+
+}
