@@ -10,9 +10,33 @@
     --secondary-color: #d8b4a0;
     --background-color: #f7f1e5;
     --text-color: #4a403a;
-    --border-color: #c9b8a3;
-    /* Trennlinienfarbe */
+    --border-color: #c9b8a3;  /* Trennlinienfarbe */
+    --section-bg: rgb(255, 255, 255);
+    --section-pic: rgb(255, 255, 255);
+    --links-bg: rgb(255, 255, 255);
 }
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #ffffff91;
+    --card-background: #1e1e1e;
+    --primary-color: #1b635f;
+    --border-color: #333333;
+    --section-bg: #423d3d;
+    --section-pic: #423d3d;
+    --links-bg: #423d3d;
+}
+
+/* Reduziert den Kontrast/die Helligkeit von Fotos im Darkmode, damit sie nicht blenden */
+[data-theme="dark"] img {
+    filter: brightness(0.8) contrast(1.2);
+}
+
+/* Macht aus einem schwarzen SVG-Icon ein weißes Icon */
+[data-theme="dark"] .social-icon {
+    filter: invert(1);
+}
+
 
 body {
     min-height: 100vh;
@@ -273,7 +297,7 @@ time,
 main article figure,
 main section figure,
 .blog-article figure {
-    background: white;
+    background: var(--section-pic);
     border: 1px solid var(--text-color);
     padding: 8px 8px 12px 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
@@ -306,7 +330,7 @@ main section figcaption,
 /* --- STARTSEITE & GITHUB GLOBAL KACHELN (Mobil-Basis) --- */
 body:has(#about) main section,
 body:has(#github1) main section {
-    background: white;
+    background: var(--section-bg);
     border: 1px solid var(--border-color);
     border-radius: 4px;
     padding: 2rem 1.5rem;
@@ -333,7 +357,7 @@ body:has(#github1) main section:last-of-type {
     object-fit: cover;
     border: 1px solid var(--text-color);
     padding: 8px;
-    background: white;
+    background: var(--section-pic);;
 }
 
 /* Spezifisches Kachel-Styling für #diary (Tagebuch) */
@@ -420,7 +444,7 @@ body:has(#github1) main section:last-of-type {
     gap: 1rem;
     padding: 0.6rem 1.5rem;
     border: 1px solid var(--text-color);
-    background: white;
+    background: var(--links-bg);
     text-decoration: none;
     color: var(--text-color);
     font-family: Georgia, serif;
@@ -461,7 +485,7 @@ body:has(#github1) main section li::before {
 
 /* --- TIC TAC TOE GAME SEITE (Spiel-Kachel) --- */
 #game-section {
-    background: white;
+    background: var(--section-bg);
     border: 1px solid var(--border-color);
     border-radius: 4px;
     padding: 2.5rem 1.5rem;
@@ -569,7 +593,7 @@ body:has(#github1) main section li::before {
 
 /* Artikel: scharf abgegrenzten Kachel */
 .blog-article {
-    background: white;
+    background: var(--section-bg);
     border: 1px solid var(--border-color);
     border-radius: 4px;
     padding: 2rem 1.5rem;
@@ -584,6 +608,10 @@ body:has(#github1) main section li::before {
 .blog-article h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
+}
+
+.blog-article p {
+    max-width: 100%;
 }
 
 /* Bild-Layouts innerhalb des Blogs */
@@ -626,7 +654,7 @@ body:has(#github1) main section li::before {
     justify-content: center;
     padding: 1rem 1.5rem;
     border: 1px solid var(--text-color);
-    background-color: white;
+    background-color: var(--links-bg);
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
@@ -698,7 +726,7 @@ body:has(#github1) main section li::before {
 }
 
 .photo-grid figure {
-    background-color: #ffffff;
+    background-color: var(--section-pic);
     border: 1px solid var(--text-color);
     padding: 12px 12px 18px 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -877,7 +905,7 @@ footer {
 
     /*Desktop: BLOG */
     .blog-main {
-        max-width: 1140px;
+       max-width: 800px;;
     }
 
     .blog-main .blog-gallery {
