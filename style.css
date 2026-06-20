@@ -357,7 +357,14 @@ body:has(#github1) main section:last-of-type {
     object-fit: cover;
     border: 1px solid var(--text-color);
     padding: 8px;
-    background: var(--section-pic);;
+    background: var(--section-pic);
+}
+
+#about figure {
+    width: 100%;
+    max-width: calc(220px + 18px); /* 220px Bild + Border/Padding-Ausgleich */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Spezifisches Kachel-Styling für #diary (Tagebuch) */
@@ -438,17 +445,17 @@ body:has(#github1) main section:last-of-type {
 }
 
 .game-start-btn {
-    display: inline-flex;
+    display: grid;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    padding: 0.6rem 1.5rem;
+    padding: 1.25rem 1.5rem;
     border: 1px solid var(--text-color);
     background: var(--links-bg);
     text-decoration: none;
     color: var(--text-color);
     font-family: Georgia, serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     border-radius: 4px;
     transition: background-color 0.2s;
@@ -616,7 +623,7 @@ body:has(#github1) main section li::before {
 
 /* Bild-Layouts innerhalb des Blogs */
 .blog-gallery {
-    display: flex;
+    display: grid;
     flex-direction: column;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
