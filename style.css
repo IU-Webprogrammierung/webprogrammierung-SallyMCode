@@ -10,7 +10,8 @@
     --secondary-color: #d8b4a0;
     --background-color: #f7f1e5;
     --text-color: #4a403a;
-    --border-color: #c9b8a3;  /* Trennlinienfarbe */
+    --border-color: #c9b8a3;
+    /* Trennlinienfarbe */
     --section-bg: rgb(255, 255, 255);
     --section-pic: rgb(255, 255, 255);
     --links-bg: rgb(255, 255, 255);
@@ -362,7 +363,8 @@ body:has(#github1) main section:last-of-type {
 
 #about figure {
     width: 100%;
-    max-width: calc(220px + 18px); /* 220px Bild + Border/Padding-Ausgleich */
+    max-width: calc(220px + 18px);
+    /* 220px Bild + Border/Padding-Ausgleich */
     margin-left: auto;
     margin-right: auto;
 }
@@ -912,7 +914,8 @@ footer {
 
     /*Desktop: BLOG */
     .blog-main {
-       max-width: 800px;;
+        max-width: 800px;
+        ;
     }
 
     .blog-main .blog-gallery {
@@ -1052,6 +1055,43 @@ footer {
     body:has(#game-section) #game-section {
         max-width: 700px;
         padding: 3rem;
+    }
+
+    /* LARGE DESKTOP MEDIA QUERY (Ab 1200px Breite)*/
+    @media (min-width: 1200px) {
+
+        body:has(#about) #main-content {
+            max-width: 1200px;
+            display: grid !important;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+
+        body:has(#about) #about {
+            grid-column: 1;
+            margin-bottom: 0;
+            height: 100%;
+        }
+
+
+        body:has(#about) .right-column-container {
+            grid-column: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            height: 100%;
+        }
+
+        body:has(#about) #game {
+            flex-grow: 1;
+            margin-bottom: 0;
+        }
+
+        body:has(#about) #diary,
+        body:has(#about) #quick-links {
+            margin-bottom: 0;
+        }
     }
 
 }
