@@ -1,8 +1,11 @@
 const lang = document.documentElement.lang;
 const suffix = lang === "en" ? "-en" : "";
 
-loadComponent("header", `components/header${suffix}.html`);
-loadComponent("footer", `components/footer${suffix}.html`);
+// Komponenten gleichzeitig laden
+Promise.all([
+    loadComponent("header", `components/header${suffix}.html`),
+    loadComponent("footer", `components/footer${suffix}.html`)
+]);
 
 async function loadComponent(selector, path) {
     try {
@@ -13,7 +16,6 @@ async function loadComponent(selector, path) {
         }
 
         const html = await response.text();
-
         const element = document.querySelector(selector);
 
         if (element) {
@@ -28,24 +30,16 @@ async function loadComponent(selector, path) {
         }
 
     } catch (error) {
-        console.error(
-            `Komponente ${path} konnte nicht geladen werden`,
-            error
-        );
+        console.error(`Komponente ${path} konnte nicht geladen werden`, error);
     }
 }
 
+// Aktuelle Seite im Header markieren
 function initializeCurrentPage() {
-
-    const currentPage =
-        window.location.pathname.split("/").pop() || "index.html";
-
-    const navLinks = document.querySelectorAll(
-        '.navbar a:not([href^="mailto:"])'
-    );
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll('.navbar a:not([href^="mailto:"])');
 
     navLinks.forEach(link => {
-
         const href = link.getAttribute("href");
 
         if (href === currentPage) {
@@ -53,21 +47,16 @@ function initializeCurrentPage() {
         } else {
             link.removeAttribute("aria-current");
         }
-
     });
 }
 
+// Sprachumschalter initialisieren
 function initializeLanguageSwitcher() {
+    const languageSelect = document.getElementById("language-select");
+    if (!languageSelect) return;
 
-    const languageSelect =
-        document.getElementById("language-select");
-
-    if (!languageSelect) {
-        return;
-    }
-
-    const currentLang =
-        document.documentElement.lang;
+    const currentLang = document.documentElement.lang;
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
     const translations = {
         "index.html": "index-en.html",
@@ -87,92 +76,57 @@ function initializeLanguageSwitcher() {
         "game-en.html": "game.html"
     };
 
-    const currentPage =
-        window.location.pathname.split("/").pop() || "index.html";
+    const translatedPage = translations[currentPage];
+    if (!translatedPage) return;
 
-    const translatedPage =
-        translations[currentPage];
-
-    if (!translatedPage) {
-        return;
-    }
-
-    if (currentLang === "de") {
-
-        languageSelect.innerHTML = `
-            <option value="${currentPage}" selected>DE</option>
-            <option value="${translatedPage}">EN</option>
-        `;
-
-    } else {
-
-        languageSelect.innerHTML = `
-            <option value="${translatedPage}">DE</option>
-            <option value="${currentPage}" selected>EN</option>
-        `;
-
-    }
+    languageSelect.innerHTML = currentLang === "de"
+        ? `<option value="${currentPage}" selected>DE</option><option value="${translatedPage}">EN</option>`
+        : `<option value="${translatedPage}">DE</option><option value="${currentPage}" selected>EN</option>`;
 
     languageSelect.addEventListener("change", () => {
         window.location.href = languageSelect.value;
     });
 }
 
-
-/* DARK MODE TOGGLE  */
-
+/* DARK MODE TOGGLE */
 const rootElement = document.documentElement;
 
-// 1. Theme auf dem HTML-Tag und im Speicher setzen
 function setTheme(theme) {
     rootElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
 }
 
-// 2. Sofortige Erkennung beim Laden der JS-Datei
+// Sofortige Erkennung
 const savedTheme = localStorage.getItem('theme');
 const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 if (savedTheme) {
     setTheme(savedTheme);
-} else if (systemPrefersDark) {
-    setTheme('dark');
 } else {
-    setTheme('light');
+    setTheme(systemPrefersDark ? 'dark' : 'light');
 }
 
-// 3. Diese Funktion wird erst aufgerufen, wenn der Button im DOM existiert
 function initializeThemeToggle() {
     const toggleButton = document.getElementById('theme-toggle');
-    
-    if (!toggleButton) {
-        return; // Sicherheitscheck, falls der Button fehlt
-    }
+    if (!toggleButton) return;
 
     toggleButton.addEventListener('click', () => {
         const currentTheme = rootElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        setTheme(newTheme);
+        setTheme(currentTheme === 'dark' ? 'light' : 'dark');
     });
 }
 
-/*  TIC TAC TOE LOGIK */
-
-document.addEventListener("DOMContentLoaded", () => {
-    initializeTicTacToe();
-});
+/* TIC TAC TOE LOGIK */
+document.addEventListener("DOMContentLoaded", initializeTicTacToe);
 
 function initializeTicTacToe() {
     const gameGrid = document.getElementById("game-grid");
-    
-    // Wichtig: Nur ausführen, wenn auf der Spielseite
     if (!gameGrid) return;
 
     const cells = document.querySelectorAll(".cell");
     const statusDisplay = document.getElementById("game-status");
     const resetButton = document.getElementById("reset-game");
 
-    // Übersetzungen basierend auf der HTML-Sprache definieren
     const isEn = document.documentElement.lang === "en";
     const texts = {
         turn: isEn ? "Player {player} is next" : "Spieler {player} ist am Zug",
@@ -186,70 +140,64 @@ function initializeTicTacToe() {
     let gameState = ["", "", "", "", "", "", "", "", ""];
     let gameActive = true;
 
-    // Alle Gewinnkombinationen (Indizes im Spielfeld)
     const winningConditions = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8], // Horizontal
-        [0, 3, 6], [1, 4, 7], [2, 5, 8], // Vertikal
-        [0, 4, 8], [2, 4, 6]             // Diagonal
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+        [0, 4, 8], [2, 4, 6]
     ];
 
-    function handleCellClick(e) {
+    gameGrid.addEventListener("click", (e) => {
         const clickedCell = e.target;
-        const clickedCellIndex = parseInt(clickedCell.getAttribute("data-index"));
 
-        // Ignorieren, wenn das Feld belegt oder das Spiel vorbei ist
-        if (gameState[clickedCellIndex] !== "" || !gameActive) {
-            return;
-        }
+        // Nur auf Zellen reagieren, wenn das Spiel aktiv ist
+        if (!clickedCell.classList.contains("cell") || !gameActive) return;
+
+        const clickedCellIndex = parseInt(clickedCell.getAttribute("data-index"));
+        if (gameState[clickedCellIndex] !== "") return;
 
         // Zustand aktualisieren
         gameState[clickedCellIndex] = currentPlayer;
         clickedCell.textContent = currentPlayer;
-        clickedCell.classList.add(currentPlayer.toLowerCase()); // Für CSS-Styling (z.B. andere Farben für X und O)
+        clickedCell.classList.add(currentPlayer.toLowerCase());
 
-        // Barrierefreiheit: ARIA-Label der Zelle für Screenreader aktualisieren
+        // Barrierefreiheit aktualisieren
         const cellNum = clickedCellIndex + 1;
         clickedCell.setAttribute(
-            "aria-label", 
+            "aria-label",
             texts.cellFilled.replace("{num}", cellNum).replace("{player}", currentPlayer)
         );
 
         checkForResults();
-    }
+    });
 
+
+    // Überprüfen der Gewinnbedingungen
     function checkForResults() {
         let roundWon = false;
 
-        for (let i = 0; i < winningConditions.length; i++) {
-            const winCondition = winningConditions[i];
-            let a = gameState[winCondition[0]];
-            let b = gameState[winCondition[1]];
-            let c = gameState[winCondition[2]];
+        for (let condition of winningConditions) {
+            let a = gameState[condition[0]];
+            let b = gameState[condition[1]];
+            let c = gameState[condition[2]];
 
-            if (a === "" || b === "" || c === "") {
-                continue;
-            }
-            if (a === b && b === c) {
+            if (a && a === b && b === c) {
                 roundWon = true;
                 break;
             }
         }
-
+        // Sieg oder Unentschieden prüfen
         if (roundWon) {
             statusDisplay.textContent = texts.win.replace("{player}", currentPlayer);
             gameActive = false;
             return;
         }
 
-        // Unentschieden prüfen (keine leeren Felder mehr)
-        let roundDraw = !gameState.includes("");
-        if (roundDraw) {
+        if (!gameState.includes("")) {
             statusDisplay.textContent = texts.draw;
             gameActive = false;
             return;
         }
 
-        // Spieler wechseln
         currentPlayer = currentPlayer === "X" ? "O" : "X";
         statusDisplay.textContent = texts.turn.replace("{player}", currentPlayer);
     }
@@ -262,14 +210,13 @@ function initializeTicTacToe() {
 
         cells.forEach(cell => {
             cell.textContent = "";
-            cell.className = "cell"; // Setzt zusätzliche Klassen (x / o) zurück
-            
+            cell.className = "cell";
             const cellNum = parseInt(cell.getAttribute("data-index")) + 1;
             cell.setAttribute("aria-label", texts.cellEmpty.replace("{num}", cellNum));
         });
     }
 
-    // Event Listener registrieren
-    cells.forEach(cell => cell.addEventListener("click", handleCellClick));
-    resetButton.addEventListener("click", resetGame);
+    if (resetButton) {
+        resetButton.addEventListener("click", resetGame);
+    }
 }
