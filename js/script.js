@@ -117,7 +117,7 @@ function initializeThemeToggle() {
 }
 
 /* TIC TAC TOE LOGIK */
-document.addEventListener("DOMContentLoaded", initializeTicTacToe);
+initializeTicTacToe();
 
 function initializeTicTacToe() {
     const gameGrid = document.getElementById("game-grid");
