@@ -105,7 +105,7 @@ img {
 /* HEADER & CONTROLS (Kopfbereich & Schalter) */
 header {
     background-color: var(--background-color);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 0.125rem solid var(--border-color);
     min-height: 4rem;
     display: flex;
     justify-content: flex-end;
@@ -185,7 +185,7 @@ nav {
     bottom: 100%;
     left: 0;
     background: var(--background-color);
-    min-width: 240px;
+    min-width: 15rem;
     list-style: none;
     padding: 0;
     margin-bottom: 0px;
@@ -300,7 +300,7 @@ main section figure,
 .blog-article figure {
     background: var(--section-pic);
     border: 1px solid var(--text-color);
-    padding: 8px 8px 12px 8px;
+   padding: 0.5rem 0.5rem 0.75rem 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
     margin-bottom: 1.5rem;
     width: 100%;
@@ -353,18 +353,17 @@ body:has(#github1) main section:last-of-type {
 }
 
 #about img {
-    width: 220px;
-    height: 220px;
+    width: 14rem;
+    height: 14rem;
     object-fit: cover;
     border: 1px solid var(--text-color);
-    padding: 8px;
+    padding: 0.5rem;
     background: var(--section-pic);
 }
 
 #about figure {
     width: 100%;
-    max-width: calc(220px + 18px);
-    /* 220px Bild + Border/Padding-Ausgleich */
+    max-width: calc(14rem + 1.25rem);
     margin-left: auto;
     margin-right: auto;
 }
@@ -391,8 +390,8 @@ body:has(#github1) main section:last-of-type {
 }
 
 #diary img {
-    width: 70px;
-    height: 70px;
+    width: 4.5rem;
+    height: 4.5rem;
     object-fit: cover;
     border: 1px solid var(--border-color);
     border-radius: 2px;
@@ -462,7 +461,7 @@ body:has(#github1) main section:last-of-type {
     border-radius: 4px;
     transition: background-color 0.2s;
     margin-top: 0.5rem;
-    max-width: 280px;
+    max-width: 17.5rem;
     width: 100%;
 }
 
@@ -502,7 +501,7 @@ body:has(#github1) main section li::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 450px;
+    max-width: 28rem;
     margin: 0 auto;
     width: 100%;
 }
@@ -511,11 +510,11 @@ body:has(#github1) main section li::before {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: repeat(3, minmax(0, 1fr));
-    gap: 6px;
+    gap: 0.375rem;
     background-color: var(--text-color);
-    padding: 6px;
-    border-radius: 2px;
-    width: clamp(300px, 60vw, 600px);
+    padding: 0.375rem;
+    border-radius: 0.125rem;
+    width: clamp(18rem, 60vw, 37.5rem);
     aspect-ratio: 1 / 1;
     margin-bottom: 1.5rem;
 }
@@ -578,7 +577,7 @@ body:has(#github1) main section li::before {
 }
 
 #reset-game img {
-    width: 28px;
+    width: 1.75rem;
     height: auto;
     opacity: 0.8;
 }
@@ -596,7 +595,7 @@ body:has(#github1) main section li::before {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 0.125rem solid var(--text-color);
     padding-bottom: 1rem;
 }
 
@@ -639,7 +638,7 @@ body:has(#github1) main section li::before {
 
 /* Einzelbilder auf eine bestimmte Breite begrenzen */
 .blog-single-image {
-    max-width: 340px;
+    max-width: 21rem;
     margin-bottom: 1.5rem;
 }
 
@@ -699,7 +698,7 @@ body:has(#github1) main section li::before {
 .list-group-item {
     position: relative;
     padding: 1.2rem 1rem 1.2rem 1.5rem;
-    border-left: 2px solid var(--text-color);
+    border-left: 0.125rem solid var(--text-color);
     margin-left: 0.5rem;
     color: var(--text-color);
     font-size: 1.05rem;
@@ -710,10 +709,10 @@ body:has(#github1) main section li::before {
 .list-group-item::before {
     content: "";
     position: absolute;
-    left: -5px;
+    left: -0.3125rem;
     top: 1.6rem;
-    width: 8px;
-    height: 8px;
+    width: 0.5rem;
+    height: 0.5rem;
     background-color: var(--primary-color);
     border: 1px solid var(--text-color);
 }
@@ -737,7 +736,7 @@ body:has(#github1) main section li::before {
 .photo-grid figure {
     background-color: var(--section-pic);
     border: 1px solid var(--text-color);
-    padding: 12px 12px 18px 12px;
+    padding: 0.75rem 0.75rem 1.125rem 0.75rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     margin: 0;
     width: 100%;
@@ -751,7 +750,7 @@ body:has(#github1) main section li::before {
 .photo-grid img {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: 25rem;
     object-fit: contain;
     display: block;
     background-color: var(--background-color);
@@ -769,7 +768,7 @@ footer {
 }
 
 .footer-content {
-    max-width: 850px;
+    max-width: 53rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -879,7 +878,7 @@ footer {
 
     /* Desktop: STARTSEITE */
     body:has(#about) #main-content {
-        max-width: 850px;
+        max-width: 53rem;
     }
 
     body:has(#about) main section {
@@ -896,7 +895,7 @@ footer {
         float: left;
         margin-right: 2.5rem;
         margin-bottom: 1.5rem;
-        max-width: 240px;
+        max-width: 15rem;
     }
 
     body:has(#about) #diary li {
@@ -904,8 +903,8 @@ footer {
     }
 
     body:has(#about) #diary img {
-        width: 90px;
-        height: 90px;
+        width: 5.625rem;
+        height: 5.625rem;
     }
 
     body:has(#about) .tile {
@@ -914,7 +913,7 @@ footer {
 
     /*Desktop: BLOG */
     .blog-main {
-        max-width: 800px;
+        max-width: 50rem;
         ;
     }
 
@@ -928,7 +927,7 @@ footer {
 
     /*Desktop: LEBENSLAUF */
     body:has(#school) #main-content {
-        max-width: 800px;
+        max-width: 50rem;
     }
 
     .contact-links ul {
@@ -947,13 +946,13 @@ footer {
 
     .list-group-item::before {
         left: -6px;
-        width: 10px;
-        height: 10px;
+        width: 0.5rem;
+        height: 0.5rem;
     }
 
     /* Desktop: FOTOGRAFIEN */
     body:has(#landschaften) #main-content {
-        max-width: 1400px;
+        max-width: 87.5rem;
         padding-left: 2rem;
         padding-right: 2rem;
     }
@@ -968,13 +967,13 @@ footer {
     body:has(#landschaften) .photo-grid figure {
         flex: 1;
         max-width: calc(33.333% - 1.35rem);
-        padding: 16px 16px 24px 16px;
+        padding: 1rem 1rem 1.5rem 1rem;
         display: flex;
         flex-direction: column;
     }
 
     body:has(#landschaften) .photo-grid img {
-        height: 380px;
+        height: 23.75rem;
         object-fit: cover;
         flex-grow: 1;
     }
@@ -986,7 +985,7 @@ footer {
 
     /*Desktop: REISEBERICHTE */
     body:has(#travel1) #main-content {
-        max-width: 950px;
+        max-width: 59.375rem;
     }
 
     body:has(#travel1) main article {
@@ -1013,7 +1012,7 @@ footer {
     }
 
     body:has(#travel1) main article figure img {
-        height: 300px;
+        height: 18.75rem;
         object-fit: cover;
     }
 
@@ -1034,7 +1033,7 @@ footer {
 
     /* Desktop: GITHUB PROJEKTE */
     body:has(#github1) #main-content {
-        max-width: 850px;
+        max-width: 53rem;
     }
 
     body:has(#github1) main section {
@@ -1043,25 +1042,26 @@ footer {
     }
 
     body:has(#github1) main section figure {
-        max-width: 450px;
+        max-width: 28.125rem;
         margin-bottom: 2rem;
     }
 
     /* Desktop: TIC TAC TOE */
     body:has(#game-section) #main-content {
-        max-width: 900px;
+        max-width: 56.25rem;
     }
 
     body:has(#game-section) #game-section {
-        max-width: 700px;
+        max-width: 43.75rem;
         padding: 3rem;
     }
+}
 
     /* LARGE DESKTOP MEDIA QUERY (Ab 1200px Breite)*/
     @media (min-width: 1200px) {
 
         body:has(#about) #main-content {
-            max-width: 1200px;
+            max-width: 75rem;
             display: grid !important;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
@@ -1094,4 +1094,3 @@ footer {
         }
     }
 
-}
