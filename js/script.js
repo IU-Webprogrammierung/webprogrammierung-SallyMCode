@@ -1,19 +1,15 @@
-const lang = document.documentElement.lang;
-const suffix = lang === "en" ? "-en" : "";
+let currentLang = localStorage.getItem("selectedLanguage") || "de";
 
-// Komponenten gleichzeitig laden
+// Komponenten laden
 Promise.all([
-    loadComponent("header", `components/header${suffix}.html`),
-    loadComponent("footer", `components/footer${suffix}.html`)
+    loadComponent("header", "components/header.html"),
+    loadComponent("footer", "components/footer.html")
 ]);
 
 async function loadComponent(selector, path) {
     try {
         const response = await fetch(path);
-
-        if (!response.ok) {
-            throw new Error(`Fehler ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`Fehler ${response.status}`);
 
         const html = await response.text();
         const element = document.querySelector(selector);
@@ -21,17 +17,76 @@ async function loadComponent(selector, path) {
         if (element) {
             element.innerHTML = html;
 
-            // Header initialisieren
             if (selector === "header") {
                 initializeLanguageSwitcher();
                 initializeCurrentPage();
                 initializeThemeToggle();
+                applyTranslations(currentLang);
             }
         }
-
     } catch (error) {
         console.error(`Komponente ${path} konnte nicht geladen werden`, error);
     }
+}
+
+// Die zentrale Übersetzungsfunktion
+async function applyTranslations(langCode) {
+    try {
+        const response = await fetch(`lang/${langCode}.json`);
+        if (!response.ok) return;
+
+        const translations = await response.json();
+
+        // DOM-Elemente übersetzen
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+            const key = el.getAttribute("data-i18n");
+            if (translations[key]) el.textContent = translations[key];
+        });
+
+        document.querySelectorAll("[data-i18n-alt]").forEach(el => {
+            const key = el.getAttribute("data-i18n-alt");
+            if (translations[key]) el.setAttribute("alt", translations[key]);
+        });
+
+        document.querySelectorAll("[data-i18n-title]").forEach(el => {
+            const key = el.getAttribute("data-i18n-title");
+            if (translations[key]) el.setAttribute("title", translations[key]);
+        });
+
+        document.querySelectorAll("[data-i18n-aria]").forEach(el => {
+            const key = el.getAttribute("data-i18n-aria");
+            if (translations[key]) el.setAttribute("aria-label", translations[key]);
+        });
+
+        if (translations["page_title"]) document.title = translations["page_title"];
+        
+        // Das lang-Attribut im HTML-Tag für Screenreader anpassen
+        document.documentElement.lang = langCode;
+        localStorage.setItem("selectedLanguage", langCode);
+        currentLang = langCode;
+
+    } catch (error) {
+        console.error("Fehler beim Laden der Sprachdatei:", error);
+    }
+}
+
+// Sprachumschalter neu aufbauen
+function initializeLanguageSwitcher() {
+    const languageSelect = document.getElementById("language-select");
+    if (!languageSelect) return;
+
+    // dropdown auf den gespeicherten Wert setzen
+    languageSelect.value = currentLang;
+
+    // Beim Umschalten wird die Übersetzungsfunktion aufgerufen
+    languageSelect.addEventListener("change", (e) => {
+        applyTranslations(e.target.value);
+        
+        // Tic-Tac-Toe Zustand anpassen, falls das Spiel auf der Seite aktiv ist
+        if (typeof initializeTicTacToe === "function" && document.getElementById("game-grid")) {
+            initializeTicTacToe(); 
+        }
+    });
 }
 
 // Aktuelle Seite im Header markieren
@@ -40,51 +95,11 @@ function initializeCurrentPage() {
     const navLinks = document.querySelectorAll('.navbar a:not([href^="mailto:"])');
 
     navLinks.forEach(link => {
-        const href = link.getAttribute("href");
-
-        if (href === currentPage) {
+        if (link.getAttribute("href") === currentPage) {
             link.setAttribute("aria-current", "page");
         } else {
             link.removeAttribute("aria-current");
         }
-    });
-}
-
-// Sprachumschalter initialisieren
-function initializeLanguageSwitcher() {
-    const languageSelect = document.getElementById("language-select");
-    if (!languageSelect) return;
-
-    const currentLang = document.documentElement.lang;
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
-
-    const translations = {
-        "index.html": "index-en.html",
-        "blog.html": "blog-en.html",
-        "lebenslauf.html": "cvitae.html",
-        "fotografien.html": "photography.html",
-        "reiseberichte.html": "travel-reports.html",
-        "github.html": "github-en.html",
-        "game.html": "game-en.html",
-
-        "index-en.html": "index.html",
-        "blog-en.html": "blog.html",
-        "cvitae.html": "lebenslauf.html",
-        "photography.html": "fotografien.html",
-        "travel-reports.html": "reiseberichte.html",
-        "github-en.html": "github.html",
-        "game-en.html": "game.html"
-    };
-
-    const translatedPage = translations[currentPage];
-    if (!translatedPage) return;
-
-    languageSelect.innerHTML = currentLang === "de"
-        ? `<option value="${currentPage}" selected>DE</option><option value="${translatedPage}">EN</option>`
-        : `<option value="${translatedPage}">DE</option><option value="${currentPage}" selected>EN</option>`;
-
-    languageSelect.addEventListener("change", () => {
-        window.location.href = languageSelect.value;
     });
 }
 
@@ -149,18 +164,15 @@ function initializeTicTacToe() {
     gameGrid.addEventListener("click", (e) => {
         const clickedCell = e.target;
 
-        // Nur auf Zellen reagieren, wenn das Spiel aktiv ist
         if (!clickedCell.classList.contains("cell") || !gameActive) return;
 
         const clickedCellIndex = parseInt(clickedCell.getAttribute("data-index"));
         if (gameState[clickedCellIndex] !== "") return;
 
-        // Zustand aktualisieren
         gameState[clickedCellIndex] = currentPlayer;
         clickedCell.textContent = currentPlayer;
         clickedCell.classList.add(currentPlayer.toLowerCase());
 
-        // Barrierefreiheit aktualisieren
         const cellNum = clickedCellIndex + 1;
         clickedCell.setAttribute(
             "aria-label",
@@ -170,8 +182,6 @@ function initializeTicTacToe() {
         checkForResults();
     });
 
-
-    // Überprüfen der Gewinnbedingungen
     function checkForResults() {
         let roundWon = false;
 
@@ -185,7 +195,7 @@ function initializeTicTacToe() {
                 break;
             }
         }
-        // Sieg oder Unentschieden prüfen
+
         if (roundWon) {
             statusDisplay.textContent = texts.win.replace("{player}", currentPlayer);
             gameActive = false;

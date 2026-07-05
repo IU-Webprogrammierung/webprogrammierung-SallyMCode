@@ -1,60 +1,55 @@
 <!-- Navigation -->
-
 <!-- (ich möchte meine echte E-Mail-Adresse nicht als Kontakt öffentlich angeben, daher Platzhalter) -->
-<nav class="navbar" aria-label="Hauptnavigation">
+        <nav class="navbar" data-i18n-aria="nav_label" aria-label="Hauptnavigation">
+            <div class="home">
+                <a href="index.html">Home</a>
+            </div>
 
-    <div class="home">
-        <a href="index.html">Home</a>
-    </div>
+            <!-- Mobile Menü -->
+            <details class="menu-dropdown">
+                <summary data-i18n="nav_menu_summary">☰ Menü</summary>
+                <ul>
+                    <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+                    <li><a href="lebenslauf.html" data-i18n="nav_cv">Lebenslauf</a></li>
+                    <li><a href="fotografien.html" data-i18n="nav_photos">Fotografien</a></li>
+                    <li><a href="reiseberichte.html" data-i18n="nav_travel">Reiseberichte</a></li>
+                    <li><a href="github.html" data-i18n="nav_github">GitHub</a></li>
+                    <li><a href="game.html" data-i18n="nav_game">Game</a></li>
+                    <li><a href="mailto:info@example.com" data-i18n="nav_contact">Kontakt</a></li>
+                </ul>
+            </details>
 
-    <!-- Mobile Menü -->
-    <details class="menu-dropdown">
-        <summary>☰ Menü</summary>
-        <ul>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="lebenslauf.html">Lebenslauf</a></li>
-            <li><a href="fotografien.html">Fotografien</a></li>
-            <li><a href="reiseberichte.html">Reiseberichte</a></li>
-            <li><a href="github.html">GitHub</a></li>
-            <li><a href="game.html">Game</a></li>
-            <li><a href="mailto:info@example.com">Kontakt</a></li>
-        </ul>
-    </details>
+            <div class="mobile-menu">
+                <a href="#top" data-i18n-aria="nav_top_label" data-i18n="nav_top_text" aria-label="Zum Seitenanfang">
+                    ↑ Top
+                </a>
+            </div>
 
+            <!-- Desktop Menü -->
+            <ul class="desktop-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+                <li><a href="lebenslauf.html" data-i18n="nav_cv">Lebenslauf</a></li>
+                <li><a href="fotografien.html" data-i18n="nav_photos">Fotografien</a></li>
+                <li><a href="reiseberichte.html" data-i18n="nav_travel">Reiseberichte</a></li>
+                <li><a href="github.html" data-i18n="nav_github">GitHub</a></li>
+                <li><a href="game.html" data-i18n="nav_game">Game</a></li>
+                <li><a href="mailto:info@example.com" data-i18n="nav_contact">Kontakt</a></li>
+            </ul>
+        </nav>
 
-    <div class="mobile-menu">
-        <a href="#top" aria-label="Zum Seitenanfang">
-            ↑ Top
-        </a>
-    </div>
+        <!-- Darkmode & Controls -->
+        <div class="controls">
+            <button type="button" id="theme-toggle">🌙
+                <span class="visually-hidden" data-i18n="darkmode_label">Darkmode umschalten</span>
+            </button>
 
-    <!-- Desktop Menü -->
-    <ul class="desktop-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="lebenslauf.html">Lebenslauf</a></li>
-        <li><a href="fotografien.html">Fotografien</a></li>
-        <li><a href="reiseberichte.html">Reiseberichte</a></li>
-        <li><a href="github.html">GitHub</a></li>
-        <li><a href="game.html">Game</a></li>
-        <li><a href="mailto:info@example.com">Kontakt</a></li>
-    </ul>
-</nav>
-
-
-<!-- Darkmode -->
-<div class="controls">
-    <button type="button" id="theme-toggle">🌙
-
-        <span class="visually-hidden">Darkmode umschalten</span>
-
-    </button>
-
-    <!-- Sprachauswahl -->
-    <label for="language-select" class="visually-hidden">
-        Sprache auswählen
-    </label>
-    <select id="language-select">
-    </select>
-
-</div>
+            <!-- Sprachauswahl -->
+            <label for="language-select" class="visually-hidden" data-i18n="lang_select_label">
+                Sprache auswählen
+            </label>
+            <select id="language-select">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+            </select>
+        </div>

@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Hauptseite - Mein Portfolio</title>
+    <title data-i18n="page_title">Hauptseite - Mein Portfolio</title>
     <script src="js/script.js" defer></script>
 </head>
 
 <body id="top">
-    <a href="#main-content" class="skip-link">
+    <a href="#main-content" class="skip-link" data-i18n="skip_link">
         Zum Inhalt springen
     </a>
 
@@ -18,84 +18,83 @@
     </header>
 
     <main id="main-content">
-
+        <!-- Über mich -->
         <section id="about">
-            <h1>Willkommen!</h1>
+            <h1 data-i18n="about_h1">Willkommen!</h1>
             <figure>
-                <img src="Fotos/Profil3.JPG" alt="Profilbild von Sally" width="200" height="200">
-                <figcaption>Sally - Informatikstudentin & Akustik-Expertin</figcaption>
+                <img src="Fotos/Profil3.JPG" data-i18n-alt="about_img_alt" alt="Profilbild von Sally" width="200" height="200">
+                <figcaption data-i18n="about_figcaption">Sally - Informatikstudentin & Akustik-Expertin</figcaption>
             </figure>
 
-            <p>Hallo, ich heiße Sally und dies ist mein Portfolio, in dem ich meine Projekte und Erfahrungen und ein
+            <p data-i18n="about_p1">Hallo, ich heiße Sally und dies ist mein Portfolio, in dem ich meine Projekte und Erfahrungen und ein
                 bisschen über mich selbst präsentiere.
                 Viel Spaß beim Entdecken und Erkunden! Ich bin 34 Jahre alt und studiere Informatik im Fernstudium.
                 Die letzten 15 Jahre war ich im Handwerk der Akustik tätig und seit neun Jahren bin ich
                 Leiterin von unterschiedlichen Teams in Deutschland im Bereich Heil- und Hilfsmitteln.</p>
-            <p>Um mehr über meinen genauen Weg zu erfahren, klicke auf meinen <a href="lebenslauf.html">Lebenslauf</a>
+            <p>
+                <span data-i18n="about_p2_text">Um mehr über meinen genauen Weg zu erfahren, klicke auf meinen </span><a href="lebenslauf.html" data-i18n="about_p2_link">Lebenslauf</a>
             </p>
         </section>
 
-        <!-- Blogeinträge -->
+        <!-- Tagebuch -->
         <section id="diary">
-            <h2>Tagebuch</h2>
+            <h2 data-i18n="diary_h2">Tagebuch</h2>
             <ul>
                 <li>
-                    <a href="blog.html#geburtstag" title="Geburtstag feiern">
-                        <img src="Fotos/Geburtstag.JPG" alt="Foto vom Geburtstag" width="50" height="50">
-                        <span>Geburtstagsfeier</span>
+                    <a href="blog.html#geburtstag" data-i18n-title="diary_1_title" title="Geburtstag feiern">
+                        <img src="Fotos/Geburtstag.JPG" data-i18n-alt="diary_1_alt" alt="Foto vom Geburtstag" width="50" height="50">
+                        <span data-i18n="diary_1_span">Geburtstagsfeier</span>
                     </a>
                 </li>
                 <li>
-                    <a href="blog.html#spielnachmittag-mit-marla" title="Katze in einer Tüte">
-                        <img src="Fotos/KatzeTüte.JPG" alt="Foto von einer Katze in einer Tüte" width="50" height="50">
-                        <span>Mit der Katze spielen</span>
+                    <a href="blog.html#spielnachmittag-mit-marla" data-i18n-title="diary_2_title" title="Katze in einer Tüte">
+                        <img src="Fotos/KatzeTüte.JPG" data-i18n-alt="diary_2_alt" alt="Foto von einer Katze in einer Tüte" width="50" height="50">
+                        <span data-i18n="diary_2_span">Mit der Katze spielen</span>
                     </a>
                 </li>
                 <li>
-                    <a href="blog.html#buero-renovierung" title="Renovierung">
-                        <img src="Fotos/Renovierung.jpg" alt="Foto von der Renovierung" width="50" height="50">
-                        <span>Bürorenovierung</span>
+                    <a href="blog.html#buero-renovierung" data-i18n-title="diary_3_title" title="Renovierung">
+                        <img src="Fotos/Renovierung.jpg" data-i18n-alt="diary_3_alt" alt="Foto von der Renovierung" width="50" height="50">
+                        <span data-i18n="diary_3_span">Bürorenovierung</span>
                     </a>
                 </li>
             </ul>
         </section>
 
-        <!-- Flächen zur Weiterleitung Reisen, Fotos und GitHub -->
+        <!-- Kacheln -->
         <section id="quick-links">
-            <h2>Mehr entdecken</h2>
+            <h2 data-i18n="discover_h2">Mehr entdecken</h2>
             <ul class="tile-container">
                 <li>
                     <a href="reiseberichte.html" class="tile">
-                        <span>Meine Reisen</span>
+                        <span data-i18n="discover_travel">Meine Reisen</span>
                     </a>
                 </li>
                 <li>
                     <a href="fotografien.html" class="tile">
-                        <span>Galerie</span>
+                        <span data-i18n="discover_gallery">Galerie</span>
                     </a>
                 </li>
                 <li>
                     <a href="github.html" class="tile">
-                        <span>Meine Projekte auf GitHub</span>
+                        <span data-i18n="discover_github">Meine Projekte auf GitHub</span>
                     </a>
                 </li>
             </ul>
         </section>
 
-        <!-- Fläche zur Weiterleitung Game -->
+        <!-- Mini-Game Teaser -->
         <section id="game">
-            <h2>Eine Runde spielen</h2>
-            <a href="game.html" aria-label="Spiel starten" class="game-start-btn">
+            <h2 data-i18n="game_h2">Eine Runde spielen</h2>
+            <a href="game.html" data-i18n-aria="game_btn_label" aria-label="Spiel starten" class="game-start-btn">
                 <img src="Fotos/PlayButton.png" alt="" width="40">
-                <span>Mini-Game starten →</span>
+                <span data-i18n="game_btn_span">Mini-Game starten →</span>
             </a>
         </section>
-
     </main>
 
     <footer>
     </footer>
-
 </body>
 
 </html>
