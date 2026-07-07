@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="js/script.js" defer></script>
-    <title>Tic Tac Toe - Mein Portfolio</title>
+    <title data-i18n="game_page_title">Tic Tac Toe - Mein Portfolio</title>
 </head>
 
 <body>
-    <a href="#main-content" class="skip-link">
+    <a href="#main-content" class="skip-link" data-i18n="game_skip_link">
         Zum Inhalt springen
     </a>
 
@@ -18,12 +18,12 @@
     </header>
 
     <main id="main-content">
-        <h1>Tic Tac Toe</h1>
+        <h1 data-i18n="game_h1">Tic Tac Toe</h1>
 
         <section id="game-section">
-            <h2 class="visually-hidden">Spielfeld</h2>
-            <div id="game-grid" role="grid" aria-label="Tic Tac Toe Spielfeld" aria-describedby="game-status">
-                <!-- 9 Felder für das Spiel -->
+            <h2 class="visually-hidden" data-i18n="game_h2_hidden">Spielfeld</h2>
+            <div id="game-grid" role="grid" data-i18n-aria="game_grid_label" aria-label="Tic Tac Toe Spielfeld" aria-describedby="game-status">
+                                <!-- 9 Felder für das Spiel -->
                 <button role="gridcell" class="cell" data-index="0" aria-label="Feld 1, leer"></button>
                 <button role="gridcell" class="cell" data-index="1" aria-label="Feld 2, leer"></button>
                 <button role="gridcell" class="cell" data-index="2" aria-label="Feld 3, leer"></button>
@@ -36,13 +36,13 @@
             </div>
 
             <!-- Statusanzeige -->
-            <p id="game-status" aria-live="polite">Spieler X ist am Zug</p>
+            <p id="game-status" aria-live="polite" data-i18n="game_status_start">Spieler X ist am Zug</p>
 
             <!-- Steuerung -->
             <div class="game-controls">
-                <button type="button" id="reset-game" aria-label="Spiel zurücksetzen">
+                <button type="button" id="reset-game" data-i18n-aria="game_reset_aria" aria-label="Spiel zurücksetzen">
                     <img src="Fotos/play-taste.png" alt="" width="50">
-                    <span class="visually-hidden">
+                    <span class="visually-hidden" data-i18n="game_reset_text">
                         Spiel neu starten
                     </span>
                 </button>
