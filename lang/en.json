@@ -183,5 +183,9 @@
   "game_cell_o": "Cell %index%, O",
   "game_status_start": "Player X's turn",
   "game_reset_aria": "Reset game",
-  "game_reset_text": "Restart game"
+  "game_reset_text": "Restart game",
+  "404_title": "404 - Page not found - My Portfolio",
+  "404_h1": "Oops! This page doesn't exist.",
+  "404_p": "Please check your URL or use the button to navigate safely back to the home page.",
+  "404_btn_back": "Back to Home"
 }

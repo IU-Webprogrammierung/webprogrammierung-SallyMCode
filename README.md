@@ -32,4 +32,5 @@ Da das Projekt ohne schweres Backend auskommt, kann es einfach repliziert werden
 
 ## Verwendete Hilfen & Quellen
 - **Icons:** [Play Button by Freepik]
+- **Bild:** https://pixabay.com/de/illustrations/nicht-gefunden-webseite-error-seite-1770320/ von xiaxinghai auf pixabay.com
 - **Dokumentation & Lerninhalte:** [W3Schools](https://www.w3schools.com/)

@@ -183,5 +183,9 @@
   "game_cell_o": "Feld %index%, O",
   "game_status_start": "Spieler X ist am Zug",
   "game_reset_aria": "Spiel zurücksetzen",
-  "game_reset_text": "Spiel neu starten"
+  "game_reset_text": "Spiel neu starten",
+  "404_title": "404 - Seite nicht gefunden - Mein Portfolio",
+  "404_h1": "Hoppla! Die Seite existiert nicht.",
+  "404_p": "Bitte überprüfe deine URL oder nutze den Button, um zurück auf die sichere Startseite zu gelangen.",
+  "404_btn_back": "Zurück zur Startseite"
 }
