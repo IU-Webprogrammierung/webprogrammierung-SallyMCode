@@ -860,7 +860,6 @@ footer {
         text-underline-offset: 4px;
     }
 
-
     /* --- UNTERSEITEN- & STARTSEITEN-STEUERUNG (Lineare Inhalts-Container ab 768px) --- */
     body:has(#about) #main-content,
     .blog-main,
@@ -1181,4 +1180,44 @@ body.error-page-body {
     .error-card h1 {
         font-size: 1.8rem;
     }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* WICHTIG für Barrierefreiheit: 
+   Nutzer, die im Betriebssystem Animationen deaktiviert haben, 
+   sollten nicht zum weichen Scrollen gezwungen werden. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .photo-grid figure,
+    .desktop-menu a::after,
+    .footer-links .back-to-top:hover {
+        animation: none;
+        transition: none;
+        transform: none;
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    /* Hüpft leicht nach oben */
+}
+
+.footer-links .back-to-top:hover {
+    display: inline-block;
+    /* Damit Transform funktioniert */
+    animation: bounce 1s infinite;
 }
