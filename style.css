@@ -20,7 +20,6 @@
 [data-theme="dark"] {
     --background-color: #121212;
     --text-color: #ffffff91;
-    --card-background: #1e1e1e;
     --primary-color: #1b635f;
     --border-color: #333333;
     --section-bg: #423d3d;
@@ -870,7 +869,7 @@ footer {
     body:has(#travel1) #main-content,
     body:has(#github1) #main-content,
     body:has(#game-section) #main-content {
-        display: block !important;
+        display: block;
         margin: 0 auto;
         padding-top: 3rem;
         padding-bottom: 5rem;
@@ -1062,7 +1061,7 @@ footer {
 
     body:has(#about) #main-content {
         max-width: 75rem;
-        display: grid !important;
+        display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
@@ -1091,5 +1090,95 @@ footer {
     body:has(#about) #diary,
     body:has(#about) #quick-links {
         margin-bottom: 0;
+    }
+
+}
+
+/*   SPEZIELLE STYLES FÜR DIE 404-FEHLERSEITE (FULLSCREEN) */
+
+/* Fullscreen-Hintergrundbild für den Body */
+body.error-page-body {
+    background-image: linear-gradient(rgba(247, 241, 229, 0.4),
+            rgba(247, 241, 229, 0.75)), url('/Fotos/xiaoxinghaiNotFound.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Anpassung für den Darkmode: Bild abdunkeln */
+[data-theme="dark"] body.error-page-body {
+    background-image: linear-gradient(rgba(18, 18, 18, 0.6),
+            rgba(18, 18, 18, 0.85)), url('/Fotos/xiaoxinghaiNotFound.jpg');
+
+}
+
+.error-page-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    min-height: calc(100vh - 4rem);
+}
+
+.error-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 3rem 2rem;
+    max-width: 32rem;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin: auto;
+}
+
+/* Darkmode-Anpassung für die Glaskachel */
+[data-theme="dark"] .error-card {
+    background: rgba(30, 30, 30, 0.85);
+    /* Dunkelgrau mit Transparenz */
+    border-color: var(--border-color);
+}
+
+/* Stylen des Call-to-Action-Buttons */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Media Query Anpassungen für kleinere Displays */
+@media (max-width: 480px) {
+    .error-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .error-card h1 {
+        font-size: 1.8rem;
     }
 }
