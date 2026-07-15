@@ -31,6 +31,6 @@ Da das Projekt ohne schweres Backend auskommt, kann es einfach repliziert werden
 2. Die `index.html` direkt in einem beliebigen Browser öffnen.
 
 ## Verwendete Hilfen & Quellen
-- **Icons:** [Play Button by Freepik]
+- **Icons:** [Play Button by Freepik]; Flavicon von www.svgrepo.com/collection/nature-flat-icons/ und Formatanpassungen mit realfavicongenerator.net
 - **Bild:** https://pixabay.com/de/illustrations/nicht-gefunden-webseite-error-seite-1770320/ von xiaxinghai auf pixabay.com
 - **Dokumentation & Lerninhalte:** [W3Schools](https://www.w3schools.com/)
