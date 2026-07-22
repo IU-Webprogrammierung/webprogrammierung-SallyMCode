@@ -52,7 +52,7 @@ Das Portfolio umfasst insgesamt sieben responsive Seiten:
 - **Eltern-Gestaltung mit `:has()`:** Moderne Strukturierung ohne JavaScript-Hilfen – das CSS erkennt über den `:has()`-Selektor, welche Unterseite aktiv ist, und passt die Grid-Aufteilung des Layouts dynamisch an.
 - **Stufenlose Skalierung:** Nutzung von `clamp()` und CSS-Grid-Systemen für das Tic-Tac-Toe-Spielfeld, um auf allen Displays gleichermaßen perfekt und formstabil zu skalieren.
 - **Glassmorphism & Fehlerseite:** Eine individuell gestaltete 404-Fehlermeldung, die mithilfe von `backdrop-filter: blur()` eine semitransparente Glaskachel über dem Hintergrund erzeugt.
-- **Strategische Breakpoints:** Zielgerichtete Medienabfragen (`@media`) bei **480px** (Mobile Optimierung der Navigation), **768px** (Wechsel von Ein- auf Mehrspaltigkeit im Lebenslauf und Blog) und **1024px** (Desktop-Ausrichtung mit maximaler Inhaltsbreite), um auf allen Endgeräten ein konsistentes Layout zu garantieren.
+- **Strategische Breakpoints:** Zielgerichtete Medienabfragen (`@media`) bei **480px** (Mobile Optimierung der Navigation), **768px** (Wechsel von Ein- auf Mehrspaltigkeit auf Home und Fotografien) und **1024px** (Desktop-Ausrichtung mit maximaler Inhaltsbreite), um auf allen Endgeräten ein konsistentes Layout zu garantieren.
 
 ### Medien & Assets
 - **Optimiertes Laden von Bildern:** Bereitstellung von Bildformaten in **AVIF**, **WebP** und **JPG** über das HTML5-`<picture>`-Tag für bestmögliche Kompression und Performance.
