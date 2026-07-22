@@ -36,7 +36,7 @@ Das Portfolio umfasst insgesamt sieben responsive Seiten:
 - **Fokus auf Barrierefreiheit:** Optimiert für Screenreader durch semantische ARIA-Rollen und vollständige Tastaturbedienbarkeit.
 - **Tastatur-Fokus-Indikator:** Ästhetischer, nativer Fokus-Ring mittels `:focus-visible`, der sich nur bei echter Tastaturnavigation aktiviert und störende Outlines bei Mausklicks verhindert.
 - **Skip-Link & Visuell versteckte Elemente:** Barrierefreie Navigation für Screenreader-Nutzer durch einen versteckten Sprunglink ("Zum Inhalt springen"), der erst bei Fokus eingeblendet wird.
-- **Rücksicht auf `prefers-reduced-motion`:** Einbindung von Smooth-Scrolling (weiches Scrollen), ohne es den NutzerInnen aufzuzwingen. Vollständige Deaktivierung aller CSS-Animationen, Transformationen und des weichen Scrollverhaltens (`scroll-behavior: auto`), falls dies in den Systemeinstellungen des Betriebssystems festgelegt wurde.
+- **Rücksicht auf `prefers-reduced-motion`:** Einbindung von Smooth-Scrolling (weiches Scrollen) und beweglichem Back-To-Top-Button, ohne es den NutzerInnen aufzuzwingen. Vollständige Deaktivierung aller CSS-Animationen, Transformationen und des weichen Scrollverhaltens (`scroll-behavior: auto`), falls dies in den Systemeinstellungen des Betriebssystems festgelegt wurde.
 
 ### Barrierefreies Game-Design (Tic Tac Toe)
 - **Live-Zustandsansage für Screenreader:** Leere Spielfelder sind initial barrierefrei benannt (z. B. *"Feld 3, leer"*). Sobald ein Zug erfolgt, baut JavaScript das Attribut dynamisch um (z. B. *"Feld 3, Spieler X"*), wodurch der Spielverlauf für sehbehinderte Menschen lückenlos auditiv nachvollziehbar wird.
@@ -63,6 +63,11 @@ Das Portfolio umfasst insgesamt sieben responsive Seiten:
 Um eine saubere und nachvollziehbare Versionshistorie zu garantieren, wurde ein strukturierter Git-Workflow angewendet:
 - **Feature-Branch-Modell:** Entwicklung neuer Features (z. B. `feature/darkmode`, `feature/i18n`) isoliert auf eigenen Branches, um den `main`-Branch stabil zu halten.
 - **Aussagekräftige Commits:** Einhaltung von klaren Commit-Nachrichten zur Dokumentation der Entwicklungsschritte.
+
+## Refactoring
+- **CSS-Größenangaben:** Im CSS wurden die Größenangaben in rem und em-Angaben abgewandelt. 
+- **HTML-Korrekturen:** HTML-Anker wurden korrigiert und IDs angepasst. 
+- **Vermeidung von Redundanz:** Redundanter Code wurde möglichst reduziert bzw. entfernt. 
 
 ## Zentrale Erkenntnisse & Errungenschaften
 Im Zuge der Entwicklung wurden wertvolle methodische und technische Erkenntnisse gewonnen:
